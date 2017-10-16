@@ -6,13 +6,13 @@ android {
 
     defaultConfig {
         applicationId "com.engineers.united.unitedengineers"
-<<<<<<< HEAD:app/build.gradle
+
         minSdkVersion 21
         targetSdkVersion 25
-=======
+
         minSdkVersion 22
         targetSdkVersion 26
->>>>>>> MP3Player-Vishwas:XMPlayer/build.gradle
+
         versionCode 1
         versionName "1.0"
 
