@@ -1,6 +1,7 @@
 package com.engineers.united.unitedengineers;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.media.MediaPlayer;
@@ -23,7 +24,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MusicPlayerActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener{
+public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarChangeListener{
     private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1;
     private List<Song> songs = new ArrayList<>();
     RecyclerView songRecyclerView;
