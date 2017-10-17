@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.engineers.united.unitedengineers">
-<<<<<<< HEAD:app/src/main/AndroidManifest.xml
-=======
+
 
     <!--normal permissions-->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +10,7 @@
     <!--danger permissions-->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
->>>>>>> MP3Player-Vishwas:XMPlayer/src/main/AndroidManifest.xml
+
 
     <application
         android:allowBackup="true"
@@ -20,22 +19,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD:app/src/main/AndroidManifest.xml
-        <activity android:name=".XMPlayer">
+
+
+
+        <activity android:name="com.engineers.united.unitedengineers.MainActivity">
             <intent-filter>
-=======
-        <activity android:name="com.engineers.united.unitedengineers.XMPlayer">
-		<intent-filter>
->>>>>>> MP3Player-Vishwas:XMPlayer/src/main/AndroidManifest.xml
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD:app/src/main/AndroidManifest.xml
-=======
-        
->>>>>>> MP3Player-Vishwas:XMPlayer/src/main/AndroidManifest.xml
+        <activity android:name=".Activity1"/>
+        <activity android:name=".Activity2"/>
+        <activity android:name=".Activity3"/>
+        <activity android:name=".Activity4"/>
+        <activity android:name=".Activity5"/>
+        <activity android:name=".Activity6"/>
+        <activity android:name=".MusicPlayerActivity"/>
+
     </application>
 
 </manifest>
