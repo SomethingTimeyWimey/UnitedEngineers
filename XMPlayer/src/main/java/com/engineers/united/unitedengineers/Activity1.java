@@ -25,7 +25,7 @@ public class Activity1 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
 
-        //b_play = (Button) findViewById(R.id.b_play);
+        b_play = (Button) findViewById(R.id.b_play);
         b_play.setEnabled(false);
         b_play.setText("LOADING");
 
