@@ -16,7 +16,7 @@ public class Activity1 extends Activity {
     Button b_play;
     MediaPlayer mediaPlayer;
     boolean prepared = false;
-    boolean started = false;
+   // boolean started = false;
 
     String stream = "http://live.leanstream.co/CFNYFM?tunein";
 

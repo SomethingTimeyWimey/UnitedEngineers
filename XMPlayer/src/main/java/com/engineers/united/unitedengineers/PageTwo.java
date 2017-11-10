@@ -16,7 +16,7 @@ import com.engineers.united.unitedengineers.R;
 public class PageTwo extends Fragment {
 
 
-    public PageTwo() {
+    //public PageTwo() {
         // Required empty public constructor
     }
 
