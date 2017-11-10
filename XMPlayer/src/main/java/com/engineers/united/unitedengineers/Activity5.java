@@ -18,7 +18,7 @@ import java.io.IOException;
 
 public class Activity5 extends Activity {
 
-    //Button b_play;
+    Button b_play;
     MediaPlayer mediaPlayer;
     boolean prepared = false;
     boolean started = false;
