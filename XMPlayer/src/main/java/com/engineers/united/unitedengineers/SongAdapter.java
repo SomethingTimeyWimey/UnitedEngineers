@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.engineers.united.unitedengineers.R;
+
 import java.util.List;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> {
@@ -18,7 +20,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
     MusicPlayerActivity mainActivity;
 
 
-    public SongAdapter(MusicPlayerActivity mainActivity,List<Song> songList) {
+    public SongAdapter(MusicPlayerActivity mainActivity, List<Song> songList) {
         this.songList=songList;
         this.mainActivity=mainActivity;
     }

@@ -9,7 +9,10 @@ import android.app.ListFragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< HEAD
 import android.view.ViewGroup;
+=======
+>>>>>>> Aldo
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 

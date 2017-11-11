@@ -10,21 +10,31 @@
     <!--danger permissions-->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> Aldo
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
 
 
 
         <activity android:name="com.engineers.united.unitedengineers.MainActivity">
 		<intent-filter>
 
+=======
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+>>>>>>> Aldo
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -37,7 +47,10 @@
         <activity android:name=".Activity5"/>
         <activity android:name=".Activity6"/>
         <activity android:name=".MusicPlayerActivity"/>
+<<<<<<< HEAD
 
+=======
+>>>>>>> Aldo
     </application>
 
 </manifest>
