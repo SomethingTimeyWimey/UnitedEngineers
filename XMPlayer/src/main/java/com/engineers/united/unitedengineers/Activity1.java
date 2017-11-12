@@ -1,15 +1,6 @@
 package com.engineers.united.unitedengineers;
 
 import android.app.Activity;
-<<<<<<< HEAD
-import android.os.Bundle;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-=======
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
@@ -17,9 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.engineers.united.unitedengineers.R;
-
->>>>>>> Aldo
 import java.io.IOException;
 
 public class Activity1 extends Activity {

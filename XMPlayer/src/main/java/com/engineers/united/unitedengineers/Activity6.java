@@ -8,11 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-<<<<<<< HEAD
-=======
-import com.engineers.united.unitedengineers.R;
-
->>>>>>> Aldo
 import java.io.IOException;
 
 /**

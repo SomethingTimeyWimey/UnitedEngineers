@@ -1,17 +1,5 @@
 package com.engineers.united.unitedengineers;
 
-<<<<<<< HEAD
-import android.os.Bundle;
-import android.app.Activity;
-import com.engineers.united.unitedengineers.List;
-
-/**
- * Created by darren on 2017-10-16.
- */
-
-public class MainActivity extends Activity {
-
-=======
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -33,19 +21,10 @@ import com.engineers.united.unitedengineers.mFragments.PinFragment;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
     AHBottomNavigation bottomNavigation;
->>>>>>> Aldo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
-
-        getFragmentManager().beginTransaction()
-                .replace(R.id.container, new List())
-                .commit();
-    }
-
-=======
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         bottomNavigation= (AHBottomNavigation) findViewById(R.id.myBottomNavigation_ID);
@@ -123,5 +102,4 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
 
 
     }
->>>>>>> Aldo
 }

@@ -1,8 +1,5 @@
 package com.engineers.united.unitedengineers;
-<<<<<<< HEAD
-=======
 
->>>>>>> Aldo
 import android.app.Activity;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -11,11 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-<<<<<<< HEAD
-=======
-import com.engineers.united.unitedengineers.R;
-
->>>>>>> Aldo
 import java.io.IOException;
 
 /**
@@ -109,8 +101,4 @@ public class Activity3 extends Activity {
             mediaPlayer.release();
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> Aldo
