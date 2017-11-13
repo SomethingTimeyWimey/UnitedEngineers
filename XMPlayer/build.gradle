@@ -5,7 +5,7 @@ android {
     buildToolsVersion "26.0.2"
 
     defaultConfig {
-        applicationId "com.example.updatedfragmentlayout"
+        applicationId "com.engineers.united.unitedengineers"
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
