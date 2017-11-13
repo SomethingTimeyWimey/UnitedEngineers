@@ -1,17 +1,17 @@
 package com.engineers.united.unitedengineers;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -23,7 +23,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MusicPlayerActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener{
+public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarChangeListener{
     private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1;
     private List<Song> songs = new ArrayList<>();
     RecyclerView songRecyclerView;
@@ -40,8 +40,8 @@ public class MusicPlayerActivity extends AppCompatActivity implements SeekBar.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_musicplayeractivity);
 
-        songTotalDuration=(TextView)findViewById(R.id.songTotalDuration);
-        songCurrentPosition=(TextView)findViewById(R.id.songCurrentPosition);
+        songTotalDuration=findViewById(R.id.songTotalDuration);
+        songCurrentPosition=findViewById(R.id.songCurrentPosition);
         songProgress=(SeekBar)findViewById(R.id.songProgress);
         btnPlay=(ImageButton)findViewById(R.id.btnPlay);
         btnNext=(ImageButton)findViewById(R.id.btnNext);
