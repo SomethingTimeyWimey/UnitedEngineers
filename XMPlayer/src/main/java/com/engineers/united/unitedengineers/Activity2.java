@@ -21,7 +21,7 @@ public class Activity2 extends Activity {
     boolean prepared = false;
     boolean started = false;
 
-    String stream = "http://18653.live.streamtheworld.com/CKFMFMAAC.aac?";
+    String stream = "http://16143.live.streamtheworld.com/CKFMFMAAC.aac";
 
     @Override
     public void onCreate(Bundle savedInstanceState){
