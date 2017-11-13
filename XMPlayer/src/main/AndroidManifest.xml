@@ -22,7 +22,7 @@
 
 
 
-        <activity android:name="com.engineers.united.unitedengineers.XMPlayer">
+        <activity android:name="com.engineers.united.unitedengineers.MusicPlayerActivity">
 		<intent-filter>
 
                 <action android:name="android.intent.action.MAIN" />
