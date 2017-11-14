@@ -33,6 +33,7 @@
         <activity android:name=".Activity4"/>
         <activity android:name=".Activity5"/>
         <activity android:name=".Activity6"/>
+        <activity android:name=".Activity7"/>
         <activity android:name=".MusicPlayerActivity"/>
     </application>
 

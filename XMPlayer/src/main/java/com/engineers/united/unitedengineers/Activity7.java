@@ -12,14 +12,18 @@ import com.engineers.united.unitedengineers.R;
 
 import java.io.IOException;
 
-public class Activity1 extends Activity {
+/**
+ * Created by darren on 2017-10-15.
+ */
+
+public class Activity7 extends Activity {
 
     Button b_play;
     MediaPlayer mediaPlayer;
     boolean prepared = false;
     boolean started = false;
 
-    String stream = "http://live.leanstream.co/CFNYFM?tunein";
+    String stream = "http://16143.live.streamtheworld.com/CHUMFMAAC_SC";
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -34,7 +38,7 @@ public class Activity1 extends Activity {
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-        new PlayerTask().execute(stream);
+        new Activity7.PlayerTask().execute(stream);
 
         b_play.setOnClickListener(new View.OnClickListener() {
             @Override

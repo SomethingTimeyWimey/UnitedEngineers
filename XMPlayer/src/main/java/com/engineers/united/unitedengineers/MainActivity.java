@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -17,7 +16,6 @@ import com.engineers.united.unitedengineers.mFragments.FavoritesFragment;
 import com.engineers.united.unitedengineers.mFragments.RadioFragment;
 import com.engineers.united.unitedengineers.mFragments.SettingsFragment;
 import com.engineers.united.unitedengineers.mFragments.PinFragment;
-
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
     AHBottomNavigation bottomNavigation;

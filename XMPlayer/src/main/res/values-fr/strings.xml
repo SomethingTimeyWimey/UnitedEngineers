@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <string name="app_name">XMPlayer</string>
+    <string name="help_tab">\Aide</string>
+    <string name="GroupName">United Engineers</string>
+    <string name="LOADING">CHARGEMENT....</string>
+    <string name="PLAY">JOUER!</string>
+    <string name="PAUSE">ARRET!</string>
+
+</resources>

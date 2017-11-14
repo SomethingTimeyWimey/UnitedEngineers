@@ -32,7 +32,7 @@ public class Activity5 extends Activity {
 
         b_play = (Button) findViewById(R.id.b_play);
         b_play.setEnabled(false);
-        b_play.setText("LOADING");
+        b_play.setText(R.string.LOADING);
 
 
         mediaPlayer = new MediaPlayer();
@@ -46,11 +46,11 @@ public class Activity5 extends Activity {
                 if(started){
                     started = false;
                     mediaPlayer.pause();
-                    b_play.setText("PLAY");
+                    b_play.setText(R.string.PLAY);
                 } else {
                     started = true;
                     mediaPlayer.start();
-                    b_play.setText("PAUSE");
+                    b_play.setText(R.string.PAUSE);
                 }
             }
         });
@@ -75,7 +75,7 @@ public class Activity5 extends Activity {
         protected void onPostExecute(Boolean aBoolean){
             super.onPostExecute(aBoolean);
             b_play.setEnabled(true);
-            b_play.setText("PLAY");
+            b_play.setText(R.string.PLAY);
 
         }
     }
