@@ -21,6 +21,7 @@ public class List extends ListFragment {
             "Z103.5 ",
             "96.3 CLASSICAL FM",
             "97.7 HTZ FM",
+            "104.5 CHUM FM",
             "MP3 PLAYER"
     };
     @Override
@@ -31,7 +32,7 @@ public class List extends ListFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
-        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, listitems));
+        setListAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, listitems));
     }
 
     @Override
@@ -57,6 +58,9 @@ public class List extends ListFragment {
                 i = new Intent(getActivity(), Activity6.class);
                 break;
             case 6:
+                i = new Intent(getActivity(), Activity7.class);
+                break;
+            case 7:
                 i = new Intent(getActivity(), MusicPlayerActivity.class);
                 break;
         }

@@ -19,6 +19,7 @@ import com.engineers.united.unitedengineers.Activity3;
 import com.engineers.united.unitedengineers.Activity4;
 import com.engineers.united.unitedengineers.Activity5;
 import com.engineers.united.unitedengineers.Activity6;
+import com.engineers.united.unitedengineers.Activity7;
 import com.engineers.united.unitedengineers.MusicPlayerActivity;
 import com.engineers.united.unitedengineers.R;
 /**
@@ -35,6 +36,7 @@ public class RadioFragment extends ListFragment {
             "Z103.5 ",
             "96.3 CLASSICAL FM",
             "97.7 HTZ FM",
+            "104.5 CHUM FM",
             "MP3 PLAYER"
     };
 
@@ -79,6 +81,9 @@ public class RadioFragment extends ListFragment {
                 i = new Intent(getActivity(), Activity6.class);
                 break;
             case 6:
+                i = new Intent(getActivity(), Activity7.class);
+                break;
+            case 7:
                 i = new Intent(getActivity(), MusicPlayerActivity.class);
                 break;
         }
