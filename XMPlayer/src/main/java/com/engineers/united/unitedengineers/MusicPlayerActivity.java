@@ -18,10 +18,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
 import android.widget.Toast;
-
-import com.engineers.united.unitedengineers.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,9 +67,9 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
             public void onClick(View view) {
                 notifyDataChanged(songPosition,false);
                 songPosition++;
-                if(songPosition>songs.size())
+                if(songPosition>=songs.size())
                 {
-                    songPosition--;
+                    songPosition=0;
                 }
 
                 if(mMediaPlayer!=null) {
@@ -88,9 +85,9 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
             public void onClick(View view) {
                 notifyDataChanged(songPosition,false);
                 songPosition--;
-                if(songPosition<0)
+                if(songPosition<=0)
                 {
-                    songPosition=0;
+                    songPosition=songs.size()-1;
                 }
 
                 if(mMediaPlayer!=null) {
