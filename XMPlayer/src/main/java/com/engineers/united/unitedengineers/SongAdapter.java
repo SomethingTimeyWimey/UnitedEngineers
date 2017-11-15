@@ -54,7 +54,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
             public void onClick(View view) {
                 if(!song.isPlaying())
                 {
-                    //mainActivity.playRandomSong(position);
+                    mainActivity.playRandomSong(position);
                 }
             }
         });
