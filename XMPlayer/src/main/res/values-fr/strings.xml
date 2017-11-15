@@ -5,7 +5,10 @@
     <string name="help_tab">\Aide</string>
     <string name="GroupName">United Engineers</string>
     <string name="LOADING">CHARGEMENT....</string>
-    <string name="PLAY">JOUER!</string>
-    <string name="PAUSE">ARRET!</string>
-
+    <string name="PLAY">JOUER</string>
+    <string name="PAUSE">ARRÊTEZ</string>
+    <string name="Radio">Radio</string>
+    <string name="Favorites">Favoris</string>
+    <string name="Settings">Paramètres</string>
+    <string name="Pin">Pin</string>
 </resources>

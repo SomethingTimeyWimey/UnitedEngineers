@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private void createNavItems()
     {
         //CREATE ITEMS
-        AHBottomNavigationItem radioItem=new AHBottomNavigationItem("Radio",R.drawable.radio);
-        AHBottomNavigationItem favoritesItem=new AHBottomNavigationItem("Favorites",R.drawable.favorites);
-        AHBottomNavigationItem settingsItem=new AHBottomNavigationItem("Settings",R.drawable.settings);
-        AHBottomNavigationItem pinItem=new AHBottomNavigationItem("Pin",R.drawable.pin);
+        AHBottomNavigationItem radioItem=new AHBottomNavigationItem(R.string.Radio,R.drawable.radio,R.color.colorBottomNavigationAccent);
+        AHBottomNavigationItem favoritesItem=new AHBottomNavigationItem(R.string.Favorites,R.drawable.favorites,R.color.colorBottomNavigationAccent);
+        AHBottomNavigationItem settingsItem=new AHBottomNavigationItem(R.string.Settings,R.drawable.settings,R.color.colorBottomNavigationAccent);
+        AHBottomNavigationItem pinItem=new AHBottomNavigationItem(R.string.Pin,R.drawable.pin,R.color.colorBottomNavigationAccent);
 
         //ADD ITEMS TO BAR
         bottomNavigation.addItem(radioItem);
