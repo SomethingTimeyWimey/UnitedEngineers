@@ -85,7 +85,7 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
             public void onClick(View view) {
                 notifyDataChanged(songPosition,false);
                 songPosition--;
-                if(songPosition<=0)
+                if(songPosition<=-1)
                 {
                     songPosition=songs.size()-1;
                 }
