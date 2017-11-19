@@ -21,11 +21,7 @@ public class Activity2 extends Activity {
     boolean prepared = false;
     boolean started = false;
 
-<<<<<<< HEAD
-    String stream = "http://16143.live.streamtheworld.com/CKFMFMAAC.aac";
-=======
     String stream = "http://16143.live.streamtheworld.com/CKFMFMAAC_SC";
->>>>>>> master
 
     @Override
     public void onCreate(Bundle savedInstanceState){
