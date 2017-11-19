@@ -8,20 +8,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.engineers.united.unitedengineers.R;
+
 import java.io.IOException;
 
 /**
  * Created by darren on 2017-10-15.
  */
 
-public class Activity6 extends Activity {
+public class Activity7 extends Activity {
 
     Button b_play;
     MediaPlayer mediaPlayer;
     boolean prepared = false;
     boolean started = false;
 
-    String stream = "http://16803.live.streamtheworld.com/CHTZFMAAC.aac?";
+    String stream = "http://16143.live.streamtheworld.com/CHUMFMAAC_SC";
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -36,7 +38,7 @@ public class Activity6 extends Activity {
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-        new Activity6.PlayerTask().execute(stream);
+        new Activity7.PlayerTask().execute(stream);
 
         b_play.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,31 +1,16 @@
-package com.engineers.united.unitedengineers.mFragments;
+package com.engineers.united.unitedengineers;
 
+/**
+ * Created by darren on 2017-10-16.
+ */
+import android.app.ListFragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.engineers.united.unitedengineers.Activity1;
-import com.engineers.united.unitedengineers.Activity2;
-import com.engineers.united.unitedengineers.Activity3;
-import com.engineers.united.unitedengineers.Activity4;
-import com.engineers.united.unitedengineers.Activity5;
-import com.engineers.united.unitedengineers.Activity6;
-import com.engineers.united.unitedengineers.Activity7;
-import com.engineers.united.unitedengineers.MusicPlayerActivity;
-import com.engineers.united.unitedengineers.R;
-/**
- * Created by Oclemmy on 5/10/2016 for ProgrammingWizards Channel and http://www.Camposha.com.
- */
-public class RadioFragment extends ListFragment {
+public class List extends ListFragment {
 
     Intent i;
 
@@ -39,24 +24,16 @@ public class RadioFragment extends ListFragment {
             "104.5 CHUM FM",
             "MP3 PLAYER"
     };
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
     }
 
-    @Nullable
     @Override
-
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.listfragment, container, false);
-        ListView lv = (ListView) rootView.findViewById(R.id.list);
+    public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
-        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, listitems));
-
-        return rootView;
+        setListAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, listitems));
     }
-
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id){
