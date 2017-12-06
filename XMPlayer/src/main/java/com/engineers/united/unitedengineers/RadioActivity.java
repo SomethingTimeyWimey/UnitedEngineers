@@ -8,28 +8,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.engineers.united.unitedengineers.R;
-
 import java.io.IOException;
 
-/**
- * Created by darren on 2017-10-15.
- */
-
-public class Activity7 extends Activity {
+public class RadioActivity extends Activity {
 
     Button b_play;
     MediaPlayer mediaPlayer;
     boolean prepared = false;
     boolean started = false;
-
-    String stream = "http://16143.live.streamtheworld.com/CHUMFMAAC_SC";
+    String stream;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
-
+        Bundle bundle = getIntent().getExtras();
+        stream = bundle.getString("link");
         b_play = (Button) findViewById(R.id.b_play);
         b_play.setEnabled(false);
         b_play.setText(R.string.LOADING);
@@ -38,7 +32,7 @@ public class Activity7 extends Activity {
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-        new Activity7.PlayerTask().execute(stream);
+        new PlayerTask().execute(stream);
 
         b_play.setOnClickListener(new View.OnClickListener() {
             @Override

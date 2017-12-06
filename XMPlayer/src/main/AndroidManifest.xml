@@ -30,15 +30,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity1"/>
-        <activity android:name=".Activity2"/>
-        <activity android:name=".Activity3"/>
-        <activity android:name=".Activity4"/>
-        <activity android:name=".Activity5"/>
-        <activity android:name=".Activity6"/>
-        <activity android:name=".Activity7"/>
+        <activity android:name=".RadioActivity"/>
         <activity android:name=".MusicPlayerActivity"/>
-		<activity android:name="com.engineers.united.unitedengineers.MusicPlayerActivity"/>
     </application>
 
 </manifest>
