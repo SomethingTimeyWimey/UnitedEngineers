@@ -1,0 +1,101 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:3:5-50
+		INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:5:5-68
+	android:name
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:5:22-65
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:6:5-80
+	android:name
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:6:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:7:22-77
+application
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:9:5-31:19
+MERGED from [com.android.support:appcompat-v7:25.0.1] C:\Users\darren\.android\build-cache\a508ea64a09e44cf986612e487a830dee150bdd4\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.0.1] C:\Users\darren\.android\build-cache\8aa25c46d96400631eb6a814ab1ce29d9725be84\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.0.1] C:\Users\darren\.android\build-cache\f9744b8ea9c5d049d7e17b52a50d2d52fac65a34\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.0.1] C:\Users\darren\.android\build-cache\44e6803851fbd91bb10154e86879baca1ec4fa2b\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.0.1] C:\Users\darren\.android\build-cache\d96b5c355de61a19e715cc7e9fd87ada7fa44595\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.0.1] C:\Users\darren\.android\build-cache\c74596456abd9c72d137b2b0ea50c5dacd70ec5c\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] C:\Users\darren\.android\build-cache\e6a58f9e80fa17ca30c3089252b236a1252bf10b\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.0.1] C:\Users\darren\.android\build-cache\08ee5c270f637f13bd883be668cf50828776db14\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:25.0.1] C:\Users\darren\.android\build-cache\1e40244e1383e5904f58fd258cc0b1d233d0c73f\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\darren\.android\build-cache\cc630717cba24cdbfb4401a48fcd5f3e9eeca0ba\output\AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:12:9-41
+	android:supportsRtl
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:14:9-35
+	android:roundIcon
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:13:9-54
+	android:allowBackup
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:10:9-35
+	android:icon
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:11:9-43
+	android:theme
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:15:9-40
+style
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:16:9-18:17
+	android:parent
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:17:13-65
+	android:name
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:16:16-39
+activity#com.example.vishwas.unitedengineers.XMPlayer
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:19:9-29:20
+	android:screenOrientation
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:23:13-49
+	android:label
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:21:13-45
+	android:launchMode
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:22:13-43
+	android:name
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:20:13-37
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:24:13-28:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:27:27-74
+service#com.example.vishwas.MusicService
+ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:30:9-68
+	android:name
+		ADDED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml:30:18-65
+uses-sdk
+INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.0.1] C:\Users\darren\.android\build-cache\a508ea64a09e44cf986612e487a830dee150bdd4\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.0.1] C:\Users\darren\.android\build-cache\8aa25c46d96400631eb6a814ab1ce29d9725be84\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.0.1] C:\Users\darren\.android\build-cache\f9744b8ea9c5d049d7e17b52a50d2d52fac65a34\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.0.1] C:\Users\darren\.android\build-cache\44e6803851fbd91bb10154e86879baca1ec4fa2b\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.0.1] C:\Users\darren\.android\build-cache\d96b5c355de61a19e715cc7e9fd87ada7fa44595\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.0.1] C:\Users\darren\.android\build-cache\c74596456abd9c72d137b2b0ea50c5dacd70ec5c\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] C:\Users\darren\.android\build-cache\e6a58f9e80fa17ca30c3089252b236a1252bf10b\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.0.1] C:\Users\darren\.android\build-cache\08ee5c270f637f13bd883be668cf50828776db14\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:25.0.1] C:\Users\darren\.android\build-cache\1e40244e1383e5904f58fd258cc0b1d233d0c73f\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\darren\.android\build-cache\cc630717cba24cdbfb4401a48fcd5f3e9eeca0ba\output\AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.0.1] C:\Users\darren\.android\build-cache\a508ea64a09e44cf986612e487a830dee150bdd4\output\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\darren\Documents\GitHub\UnitedEngineers\app\src\main\AndroidManifest.xml

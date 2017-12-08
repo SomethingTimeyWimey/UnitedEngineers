@@ -12,22 +12,20 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import com.engineers.united.unitedengineers.Activity1;
-import com.engineers.united.unitedengineers.Activity2;
-import com.engineers.united.unitedengineers.Activity3;
-import com.engineers.united.unitedengineers.Activity4;
-import com.engineers.united.unitedengineers.Activity5;
-import com.engineers.united.unitedengineers.Activity6;
-import com.engineers.united.unitedengineers.Activity7;
 import com.engineers.united.unitedengineers.MusicPlayerActivity;
 import com.engineers.united.unitedengineers.R;
-/**
- * Created by Oclemmy on 5/10/2016 for ProgrammingWizards Channel and http://www.Camposha.com.
- */
+import com.engineers.united.unitedengineers.RadioActivity;
+
 public class RadioFragment extends ListFragment {
 
     Intent i;
+    String theEdge = "http://live.leanstream.co/CFNYFM?tunein";
+    String virginRadio = "http://16143.live.streamtheworld.com/CKFMFMAAC_SC";
+    String torontoRock = "http://live.leanstream.co/CILQFM-MP3?tunein";
+    String z103 = "http://ice66.securenetsystems.net/CIDC2";
+    String classicalFM = "http://65.19.131.138/mzmedia-cfmzfmaac-ibc2?session-id=1361203433&source=tunein";
+    String htzFM = "http://16803.live.streamtheworld.com/CHTZFMAAC.aac?";
+    String chumFM = "http://16143.live.streamtheworld.com/CHUMFMAAC_SC";
 
     String[] listitems = {
             "102.1 THE EDGE",
@@ -63,25 +61,32 @@ public class RadioFragment extends ListFragment {
 
         switch(position){
             case 0:
-                i = new Intent(getActivity(), Activity1.class);
+                i = new Intent(getActivity(), RadioActivity.class);
+                i.putExtra("link", theEdge);
                 break;
             case 1:
-                i = new Intent(getActivity(), Activity2.class);
+                i = new Intent(getActivity(), RadioActivity.class);
+                i.putExtra("link", virginRadio);
                 break;
             case 2:
-                i = new Intent(getActivity(), Activity3.class);
+                i = new Intent(getActivity(), RadioActivity.class);
+                i.putExtra("link", torontoRock);
                 break;
             case 3:
-                i = new Intent(getActivity(), Activity4.class);
+                i = new Intent(getActivity(), RadioActivity.class);
+                i.putExtra("link", z103);
                 break;
             case 4:
-                i = new Intent(getActivity(), Activity5.class);
+                i = new Intent(getActivity(), RadioActivity.class);
+                i.putExtra("link", classicalFM);
                 break;
             case 5:
-                i = new Intent(getActivity(), Activity6.class);
+                i = new Intent(getActivity(), RadioActivity.class);
+                i.putExtra("link", htzFM);
                 break;
             case 6:
-                i = new Intent(getActivity(), Activity7.class);
+                i = new Intent(getActivity(), RadioActivity.class);
+                i.putExtra("link", chumFM);
                 break;
             case 7:
                 i = new Intent(getActivity(), MusicPlayerActivity.class);
