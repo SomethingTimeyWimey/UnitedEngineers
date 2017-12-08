@@ -14,7 +14,6 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavoritesFragment;
 import com.engineers.united.unitedengineers.mFragments.RadioFragment;
 import com.engineers.united.unitedengineers.mFragments.SettingsFragment;
-import com.engineers.united.unitedengineers.mFragments.PinFragment;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
     AHBottomNavigation bottomNavigation;
@@ -34,13 +33,11 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         AHBottomNavigationItem radioItem=new AHBottomNavigationItem(R.string.Radio,R.drawable.radio,R.color.colorBottomNavigationAccent);
         AHBottomNavigationItem favoritesItem=new AHBottomNavigationItem(R.string.Favorites,R.drawable.favorites,R.color.colorBottomNavigationAccent);
         AHBottomNavigationItem settingsItem=new AHBottomNavigationItem(R.string.Settings,R.drawable.settings,R.color.colorBottomNavigationAccent);
-        AHBottomNavigationItem pinItem=new AHBottomNavigationItem(R.string.Pin,R.drawable.pin,R.color.colorBottomNavigationAccent);
 
         //ADD ITEMS TO BAR
         bottomNavigation.addItem(radioItem);
         bottomNavigation.addItem(favoritesItem);
         bottomNavigation.addItem(settingsItem);
-        bottomNavigation.addItem(pinItem);
 
         //PROPERTIES
         bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#191919"));
@@ -60,10 +57,6 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         {
             SettingsFragment settingsFragment=new SettingsFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id,settingsFragment).commit();
-        } else if(position==3)
-        {
-            PinFragment pinFragment=new PinFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id,pinFragment).commit();
         }
         return true;
     }
