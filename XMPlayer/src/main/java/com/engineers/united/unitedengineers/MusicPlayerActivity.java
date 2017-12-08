@@ -20,6 +20,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +35,7 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     static int songPosition=0;
     SongAdapter songAdapter;
     Handler mHandler=new Handler();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +87,7 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
             public void onClick(View view) {
                 notifyDataChanged(songPosition,false);
                 songPosition--;
-                if(songPosition<=0)
+                if(songPosition<=-1)
                 {
                     songPosition=songs.size()-1;
                 }
@@ -308,4 +310,6 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     public void onStopTrackingTouch(SeekBar seekBar) {
 
     }
+
+
 }
