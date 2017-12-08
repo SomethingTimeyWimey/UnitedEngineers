@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context="com.engineers.united.unitedengineers.MusicPlayerActivity"
     android:orientation="vertical"
+    android:background="@color/LightYellow"
     >
 
     <android.support.v7.widget.RecyclerView
