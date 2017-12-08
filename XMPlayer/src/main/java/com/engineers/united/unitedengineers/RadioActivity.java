@@ -10,23 +10,23 @@ import android.widget.Button;
 
 import java.io.IOException;
 
-public class Activity1 extends Activity {
+public class RadioActivity extends Activity {
 
     Button b_play;
     MediaPlayer mediaPlayer;
     boolean prepared = false;
     boolean started = false;
-
-    String stream = "http://live.leanstream.co/CFNYFM?tunein";
+    String stream;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
-
+        Bundle bundle = getIntent().getExtras();
+        stream = bundle.getString("link");
         b_play = (Button) findViewById(R.id.b_play);
         b_play.setEnabled(false);
-        b_play.setText("LOADING");
+        b_play.setText(R.string.LOADING);
 
 
         mediaPlayer = new MediaPlayer();
@@ -40,11 +40,11 @@ public class Activity1 extends Activity {
                 if(started){
                     started = false;
                     mediaPlayer.pause();
-                    b_play.setText("PLAY");
+                    b_play.setText(R.string.PLAY);
                 } else {
                     started = true;
                     mediaPlayer.start();
-                    b_play.setText("PAUSE");
+                    b_play.setText(R.string.PAUSE);
                 }
             }
         });
@@ -69,7 +69,7 @@ public class Activity1 extends Activity {
         protected void onPostExecute(Boolean aBoolean){
             super.onPostExecute(aBoolean);
             b_play.setEnabled(true);
-            b_play.setText("PLAY");
+            b_play.setText(R.string.PLAY);
 
         }
     }

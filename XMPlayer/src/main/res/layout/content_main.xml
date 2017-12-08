@@ -12,7 +12,5 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.engineers.united.unitedengineers.MainActivity"
     android:id="@+id/content_id"
-    tools:showIn="@layout/activity_main"
-    >
-
+    tools:showIn="@layout/activity_main">
 </RelativeLayout>

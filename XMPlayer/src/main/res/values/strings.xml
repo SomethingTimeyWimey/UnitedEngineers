@@ -2,5 +2,11 @@
     <string name="app_name">XMPlayer</string>
     <string name="help_tab">Help</string>
     <string name="GroupName">United Engineers</string>
-
+    <string name="LOADING">LOADING</string>
+    <string name="PLAY">PLAY</string>
+    <string name="PAUSE">PAUSE</string>
+    <string name="Radio">Radio</string>
+    <string name="Favorites">Favorites</string>
+    <string name="Settings">Settings</string>
+    <string name="Pin">Pin</string>
 </resources>

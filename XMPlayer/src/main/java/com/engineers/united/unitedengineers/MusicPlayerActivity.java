@@ -310,6 +310,10 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     public void onStopTrackingTouch(SeekBar seekBar) {
 
     }
+<<<<<<< HEAD
 
 
 }
+=======
+}
+>>>>>>> master
