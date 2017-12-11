@@ -48,14 +48,11 @@ public class StationListFragment extends Fragment implements
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_station_list, container,
-                false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_station_list, container, false);
         findViewsById(view);
-
         setStations();
-
         stationListAdapter = new StationListAdapter(activity, stations);
         stationListView.setAdapter(stationListAdapter);
         stationListView.setOnItemClickListener(this);
@@ -80,39 +77,33 @@ public class StationListFragment extends Fragment implements
         stations.add(classicalFM);
         stations.add(htzFM);
         stations.add(chumFM);
-
     }
 
     private void findViewsById(View view) { stationListView = (ListView) view.findViewById(R.id.list_station);}
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position,
-                            long id) {
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
         Station station = (Station) parent.getItemAtPosition(position);
-        Toast.makeText(activity, station.toString(), Toast.LENGTH_LONG).show();
+        /*Use station.postion to decide which stream is being selected then run Radio activity*/
+        //Toast.makeText(activity, station.toString(), Toast.LENGTH_LONG).show();
     }
 
     @Override
-    public boolean onItemLongClick(AdapterView<?> arg0, View view,
-                                   int position, long arg3) {
-        ImageView button = (ImageView) view.findViewById(R.id.imgbtn_favorite);
+    public boolean onItemLongClick(AdapterView<?> arg0, View view, int position, long arg3) {
 
+        ImageView button = (ImageView) view.findViewById(R.id.imgbtn_favorite);
         String tag = button.getTag().toString();
         if (tag.equalsIgnoreCase("grey")) {
             sharedPreference.addFavorite(activity, stations.get(position));
-            Toast.makeText(activity,
-                    activity.getResources().getString(R.string.add_favr),
-                    Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(activity, activity.getResources().getString(R.string.add_favr), Toast.LENGTH_SHORT).show();
             button.setTag("red");
             button.setImageResource(R.drawable.heart_red);
         } else {
             sharedPreference.removeFavorite(activity, stations.get(position));
             button.setTag("grey");
             button.setImageResource(R.drawable.heart_grey);
-            Toast.makeText(activity,
-                    activity.getResources().getString(R.string.remove_favr),
-                    Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, activity.getResources().getString(R.string.remove_favr), Toast.LENGTH_SHORT).show();
         }
 
         return true;

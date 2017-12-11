@@ -59,12 +59,10 @@ public class StationListAdapter extends ArrayAdapter<Station> {
                     .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.station_list_item, null);
             holder = new ViewHolder();
-            holder.stationNameTxt = (TextView) convertView
-                    .findViewById(R.id.txt_sta_name);
+            holder.stationNameTxt = (TextView) convertView.findViewById(R.id.txt_sta_name);
             //holder.stationDescTxt = (TextView) convertView.findViewById(R.id.txt_sta_desc);
 
-            holder.favoriteImg = (ImageView) convertView
-                    .findViewById(R.id.imgbtn_favorite);
+            holder.favoriteImg = (ImageView) convertView.findViewById(R.id.imgbtn_favorite);
 
             convertView.setTag(holder);
         } else {

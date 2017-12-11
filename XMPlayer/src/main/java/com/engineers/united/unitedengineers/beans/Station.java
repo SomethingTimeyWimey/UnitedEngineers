@@ -1,3 +1,7 @@
+/*
+* Object to be created by stationlistfragment
+* -Needs only ID, name, and description(stream link)
+* */
 package com.engineers.united.unitedengineers.beans;
 
 /**
