@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="#c7d9d9d9"
+    android:background="@color/LightYellow"
     android:descendantFocusability="blocksDescendants" >
 
     <RelativeLayout
@@ -41,6 +41,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@+id/pdt_layout_item"
-        android:background="#c7d9d9d9" />
+        android:background="@color/LightYellow" />
 
 </RelativeLayout>

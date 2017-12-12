@@ -55,6 +55,7 @@ public class RadioFragment extends ListFragment {
         super.onActivityCreated(savedInstanceState);
         setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, listitems));
 
+
         return rootView;
     }
 
