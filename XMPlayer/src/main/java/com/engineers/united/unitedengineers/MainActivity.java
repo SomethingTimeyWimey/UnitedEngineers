@@ -84,18 +84,18 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         switch (item.getItemId()) {
 
             case R.id.Help:
-                bar_intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://tunein.com/radio/local/"));
-                startActivity(bar_intent);
+                Toast.makeText(this, R.string.Greatings,Toast.LENGTH_LONG).show();
                 break;
 
-            case R.id.MP3Player:
+            case R.id.MusicPlayer:
                 Intent intent = new Intent(MainActivity.this, MusicPlayerActivity.class);
                 startActivity(intent);
                 break;
 
-            case R.id.GroupName:
+            /*case R.id.GroupName:
                 Toast.makeText(this,"United Engineers-Welcome to Our Radio App!!!", Toast.LENGTH_LONG).show();
                 break;
+            */
         }
         return super.onOptionsItemSelected(item);
     }

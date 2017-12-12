@@ -8,8 +8,8 @@
         app:showAsAction="never" />
 
     <item
-        android:title="@string/MP3Player"
-        android:id="@+id/MP3Player"
+        android:title="@string/MusicPlayer"
+        android:id="@+id/MusicPlayer"
         app:showAsAction="never"/>
 
 
