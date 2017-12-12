@@ -8,7 +8,7 @@
     <string name="Radio">Radio</string>
     <string name="Favorites">Favorites</string>
     <string name="Settings">Settings</string>
-	<string name="favorites">Favorites</string>
+	<string name="favorites">favorites</string>
     <string name="stations">Stations</string>
     <string name="MP3Player">MP3 Player</string>
 </resources>
