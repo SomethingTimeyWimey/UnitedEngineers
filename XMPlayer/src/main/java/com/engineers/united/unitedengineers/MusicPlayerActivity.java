@@ -20,6 +20,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,10 +31,13 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     TextView songCurrentPosition, songTotalDuration;
     SeekBar songProgress;
     ImageButton btnPlay, btnNext, btnPrevious;
-    MediaPlayer mMediaPlayer;
+    MediaPlayer mMediaPlayer = null;
     static int songPosition=0;
     SongAdapter songAdapter;
+    //boolean continuous = true;
+    //boolean shuffle = false;
     Handler mHandler=new Handler();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +57,7 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
         songRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         loadSongs();
+
 
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -241,6 +246,7 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
                 mMediaPlayer.start();
                 btnPlay.setImageResource(android.R.drawable.ic_media_pause);
             }
+
         }
     }
 
@@ -308,4 +314,23 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     public void onStopTrackingTouch(SeekBar seekBar) {
 
     }
+
+
+
+    @Override
+    public void onBackPressed()
+    {
+        mHandler.removeCallbacks(runnable);
+        if (mMediaPlayer!= null)
+        {
+            if(mMediaPlayer.isPlaying()){
+                mMediaPlayer.stop();
+            }
+            mMediaPlayer.release();
+        }
+
+        super.onBackPressed();
+    }
+
+
 }

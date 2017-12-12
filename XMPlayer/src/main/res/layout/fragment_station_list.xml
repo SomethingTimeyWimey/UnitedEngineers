@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c7d9d9d9">
+
+    <ListView
+        android:id="@+id/list_station"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#030303"
+        android:dividerHeight="1dp"
+        android:drawSelectorOnTop="true"
+        android:footerDividersEnabled="false"
+        android:scrollbarStyle="outsideOverlay" >
+    </ListView>
+
+</RelativeLayout>

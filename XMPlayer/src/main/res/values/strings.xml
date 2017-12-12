@@ -9,4 +9,6 @@
     <string name="Favorites">Favorites</string>
     <string name="Settings">Settings</string>
     <string name="Pin">Pin</string>
+	<string name="favorites">Favorites</string>
+    <string name="stations">Stations</string>
 </resources>

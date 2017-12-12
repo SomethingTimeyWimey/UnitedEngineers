@@ -14,6 +14,11 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavoritesFragment;
 import com.engineers.united.unitedengineers.mFragments.RadioFragment;
 import com.engineers.united.unitedengineers.mFragments.SettingsFragment;
+<<<<<<< HEAD
+=======
+import com.engineers.united.unitedengineers.mFragments.PinFragment;
+import com.engineers.united.unitedengineers.mFragments.StationListFragment;
+>>>>>>> master
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
     AHBottomNavigation bottomNavigation;
@@ -47,8 +52,9 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     public boolean onTabSelected(int position, boolean wasSelected) {
         if(position==0)
         {
-            RadioFragment radioFragment=new RadioFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id,radioFragment).commit();
+            //RadioFragment radioFragment=new RadioFragment();
+            StationListFragment stationFragment = new StationListFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_id,stationFragment).commit();
         }else if(position==1)
         {
             FavoritesFragment favoritesFragment=new FavoritesFragment();
