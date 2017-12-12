@@ -8,6 +8,7 @@ package com.engineers.united.unitedengineers.mFragments;
 import java.util.ArrayList;
 import java.util.List;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -20,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.engineers.united.unitedengineers.R;
+import com.engineers.united.unitedengineers.RadioActivity;
 import com.engineers.united.unitedengineers.adapter.StationListAdapter;
 import com.engineers.united.unitedengineers.beans.Station;
 import com.engineers.united.unitedengineers.utils.SharedPreference;
@@ -29,11 +31,11 @@ import com.engineers.united.unitedengineers.utils.SharedPreference;
  * Created by darren on 2017-11-18.
  */
 
-public class StationListFragment extends Fragment implements
-        OnItemClickListener, OnItemLongClickListener {
+public class StationListFragment extends Fragment implements OnItemClickListener, OnItemLongClickListener {
 
     public static final String ARG_ITEM_ID = "station_list";
 
+    Intent i;
     Activity activity;
     ListView stationListView;
     List<Station> stations;
@@ -85,6 +87,11 @@ public class StationListFragment extends Fragment implements
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         Station station = (Station) parent.getItemAtPosition(position);
+        String stream = station.getDescription();
+
+        i = new Intent(getActivity(), RadioActivity.class);
+        i.putExtra("link", stream);
+        startActivity(i);
         /*Use station.postion to decide which stream is being selected then run Radio activity*/
         //Toast.makeText(activity, station.toString(), Toast.LENGTH_LONG).show();
     }
