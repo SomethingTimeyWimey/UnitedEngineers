@@ -17,7 +17,6 @@ import android.widget.Toast;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavoritesFragment;
-import com.engineers.united.unitedengineers.mFragments.SettingsFragment;
 import com.engineers.united.unitedengineers.mFragments.StationListFragment;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
@@ -37,12 +36,10 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         //CREATE ITEMS
         AHBottomNavigationItem radioItem=new AHBottomNavigationItem(R.string.Radio,R.drawable.radio,R.color.colorBottomNavigationAccent);
         AHBottomNavigationItem favoritesItem=new AHBottomNavigationItem(R.string.Favorites,R.drawable.favorites,R.color.colorBottomNavigationAccent);
-        //AHBottomNavigationItem settingsItem=new AHBottomNavigationItem(R.string.Settings,R.drawable.settings,R.color.colorBottomNavigationAccent);
 
         //ADD ITEMS TO BAR
         bottomNavigation.addItem(radioItem);
         bottomNavigation.addItem(favoritesItem);
-        //bottomNavigation.addItem(settingsItem);
 
         //PROPERTIES
         bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#191919"));
@@ -59,10 +56,6 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         {
             FavoritesFragment favoritesFragment=new FavoritesFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id,favoritesFragment).commit();
-        }else if(position==2)
-        {
-            SettingsFragment settingsFragment=new SettingsFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id,settingsFragment).commit();
         }
         return true;
     }

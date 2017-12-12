@@ -1,3 +1,9 @@
+/*
+UNITED ENGINEERS
+Future functionality in this class to be added
+- Retrieve and display all radio stations that have been favourited in the previous
+- Tab fragment
+ */
 package com.engineers.united.unitedengineers.mFragments;
 
 import android.os.Bundle;
