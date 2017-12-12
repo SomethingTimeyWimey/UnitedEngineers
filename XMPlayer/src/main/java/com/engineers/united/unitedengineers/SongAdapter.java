@@ -1,3 +1,8 @@
+/*
+    United Engineers
+    this activity serves as a bridge between the user interface and the actual song data
+ */
+
 package com.engineers.united.unitedengineers;
 
 import android.graphics.Color;
@@ -60,8 +65,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
         });
     }
 
-    /*
- */
+
     @Override
     public int getItemCount() {
         return songList.size();

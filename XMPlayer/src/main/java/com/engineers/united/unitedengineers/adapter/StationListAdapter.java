@@ -1,3 +1,7 @@
+/*
+UNITED ENGINEERS
+
+*/
 package com.engineers.united.unitedengineers.adapter;
 
 import java.util.List;
@@ -72,7 +76,7 @@ public class StationListAdapter extends ArrayAdapter<Station> {
         holder.stationNameTxt.setText(station.getName());
         //holder.stationDescTxt.setText(station.getDescription());
 
-		/*If a product exists in shared preferences then set heart_red drawable
+		/*If a station exists in shared preferences then set heart_red drawable
 		 * and set a tag*/
         if (checkFavoriteItem(station)) {
             holder.favoriteImg.setImageResource(R.drawable.heart_red);
@@ -85,7 +89,7 @@ public class StationListAdapter extends ArrayAdapter<Station> {
         return convertView;
     }
 
-    /*Checks whether a particular product exists in SharedPreferences*/
+    /*Checks whether a particular station exists in SharedPreferences*/
     public boolean checkFavoriteItem(Station checkStation) {
         boolean check = false;
         List<Station> favorites = sharedPreference.getFavorites(context);

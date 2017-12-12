@@ -1,3 +1,8 @@
+/*
+    United Engineers
+    this activity displays all song files on the users phone and allows playback
+ */
+
 package com.engineers.united.unitedengineers;
 
 import android.Manifest;
@@ -20,7 +25,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,8 +38,6 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     MediaPlayer mMediaPlayer = null;
     static int songPosition=0;
     SongAdapter songAdapter;
-    //boolean continuous = true;
-    //boolean shuffle = false;
     Handler mHandler=new Handler();
 
 
@@ -50,6 +52,7 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
         btnPlay=(ImageButton)findViewById(R.id.btnPlay);
         btnNext=(ImageButton)findViewById(R.id.btnNext);
         btnPrevious=(ImageButton)findViewById(R.id.btnPrevious);
+
 
         songProgress.setOnSeekBarChangeListener(this);
 
@@ -102,6 +105,8 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
                 playMySong(songs.get((songPosition)));
             }
         });
+
+
     }
 
     private void notifyDataChanged(int position, boolean playing) {
@@ -112,29 +117,18 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     }
 
     private void loadSongs() {
-        // Here, thisActivity is the current activity
+
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
 
-            // Should we show an explanation?
-           /* if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                // Show an expanation to the user *asynchronously* -- don't block
-                // this thread waiting for the user's response! After the user
-                // sees the explanation, try again to request the permission.
-            } else*/ {
 
-                // No explanation needed, we can request the permission.
 
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                         MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
 
-                // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
-                // app-defined int constant. The callback method gets the
-                // result of the request.
-            }
+
         } else
         {
             fetchAllSongs();
@@ -193,13 +187,11 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
                     fetchAllSongs();
-                    // permission was granted, yay! Do the
-                    // songs-related task you need to do.
+
 
                 } else {
                     Toast.makeText(MusicPlayerActivity.this, "Sorry We Can't Show Songs!!!", Toast.LENGTH_SHORT).show();
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
+
                 }
                 return;
 
@@ -218,17 +210,14 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     }
 
     private void playMySong(Song song) {
-        /*if(currentSongId!=null && song.getId()!=currentSongId)
-        {
-            mMediaPlayer.release();
-            mMediaPlayer=null;
-        }*/
+
         notifyDataChanged(songPosition,true);
         if (mMediaPlayer == null)
         {
-            // currentSongId=song.getId();
+
             mMediaPlayer=MediaPlayer.create(getApplicationContext(), Uri.parse(song.getData()));
             mMediaPlayer.start();
+            mMediaPlayer.setLooping(true);
             btnPlay.setImageResource(android.R.drawable.ic_media_pause);
             songTotalDuration.setText(milliSecondsToTimer(song.getDuration()));
             updateSongProgress();
@@ -314,7 +303,6 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     public void onStopTrackingTouch(SeekBar seekBar) {
 
     }
-
 
 
     @Override

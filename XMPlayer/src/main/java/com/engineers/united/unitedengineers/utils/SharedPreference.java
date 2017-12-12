@@ -1,6 +1,7 @@
 /*
-* Object to be created in order to save and read from SharedPreferences
-* */
+UNITED ENGINEERS
+Object to be created in order to save and read from SharedPreferences
+*/
 package com.engineers.united.unitedengineers.utils;
 
 import java.util.ArrayList;
