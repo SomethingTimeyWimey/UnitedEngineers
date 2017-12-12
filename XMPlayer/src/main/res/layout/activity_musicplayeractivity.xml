@@ -5,8 +5,12 @@
     android:layout_height="match_parent"
     tools:context="com.engineers.united.unitedengineers.MusicPlayerActivity"
     android:orientation="vertical"
+<<<<<<< HEAD
     android:background="@color/LightYellow"
     >
+=======
+    android:background="@color/LightYellow">
+>>>>>>> master
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/songRecyclerView"

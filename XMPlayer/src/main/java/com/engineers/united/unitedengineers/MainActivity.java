@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavoritesFragment;
-import com.engineers.united.unitedengineers.mFragments.RadioFragment;
 import com.engineers.united.unitedengineers.mFragments.SettingsFragment;
 import com.engineers.united.unitedengineers.mFragments.StationListFragment;
 
@@ -33,12 +32,20 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         //CREATE ITEMS
         AHBottomNavigationItem radioItem=new AHBottomNavigationItem(R.string.Radio,R.drawable.radio,R.color.colorBottomNavigationAccent);
         AHBottomNavigationItem favoritesItem=new AHBottomNavigationItem(R.string.Favorites,R.drawable.favorites,R.color.colorBottomNavigationAccent);
+<<<<<<< HEAD
         AHBottomNavigationItem settingsItem=new AHBottomNavigationItem(R.string.Settings,R.drawable.settings,R.color.colorBottomNavigationAccent);
+=======
+        //AHBottomNavigationItem settingsItem=new AHBottomNavigationItem(R.string.Settings,R.drawable.settings,R.color.colorBottomNavigationAccent);
+>>>>>>> master
 
         //ADD ITEMS TO BAR
         bottomNavigation.addItem(radioItem);
         bottomNavigation.addItem(favoritesItem);
+<<<<<<< HEAD
         bottomNavigation.addItem(settingsItem);
+=======
+        //bottomNavigation.addItem(settingsItem);
+>>>>>>> master
 
         //PROPERTIES
         bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#191919"));
@@ -82,6 +89,12 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             case R.id.Help:
                 bar_intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://tunein.com/radio/local/"));
                 startActivity(bar_intent);
+                break;
+
+            case R.id.MP3Player:
+                Intent intent = new Intent(MainActivity.this, MusicPlayerActivity.class);
+                startActivity(intent);
+
                 break;
 
 
