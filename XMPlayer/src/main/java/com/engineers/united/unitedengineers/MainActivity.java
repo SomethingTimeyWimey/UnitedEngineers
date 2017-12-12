@@ -14,11 +14,7 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavoritesFragment;
 import com.engineers.united.unitedengineers.mFragments.RadioFragment;
 import com.engineers.united.unitedengineers.mFragments.SettingsFragment;
-<<<<<<< HEAD
-=======
-import com.engineers.united.unitedengineers.mFragments.PinFragment;
 import com.engineers.united.unitedengineers.mFragments.StationListFragment;
->>>>>>> master
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
     AHBottomNavigation bottomNavigation;
