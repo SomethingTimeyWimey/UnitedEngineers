@@ -1,3 +1,8 @@
+/*
+UNITED ENGINEERS
+Handles Bottom navigation bar, and our menu items
+Entry point for the entire app
+*/
 package com.engineers.united.unitedengineers;
 
 import android.content.Intent;
@@ -86,17 +91,12 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             case R.id.MP3Player:
                 Intent intent = new Intent(MainActivity.this, MusicPlayerActivity.class);
                 startActivity(intent);
-
                 break;
-
 
             case R.id.GroupName:
                 Toast.makeText(this,"United Engineers-Welcome to Our Radio App!!!", Toast.LENGTH_LONG).show();
                 break;
-
         }
         return super.onOptionsItemSelected(item);
-
-
     }
 }

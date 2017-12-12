@@ -1,3 +1,7 @@
+/*
+UNITED ENGINEERS
+Activity for the radio layout XML. Mostly logic for the PAUSE and PLAY button
+*/
 package com.engineers.united.unitedengineers;
 
 import android.app.Activity;
@@ -27,8 +31,7 @@ public class RadioActivity extends Activity {
         b_play = (Button) findViewById(R.id.b_play);
         b_play.setEnabled(false);
         b_play.setText(R.string.LOADING);
-
-
+        
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
