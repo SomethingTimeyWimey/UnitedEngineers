@@ -46,6 +46,7 @@
                 android:src="@android:drawable/ic_media_next"
                 android:background="@android:color/transparent"
                 />
+
         </LinearLayout>
 
         <LinearLayout

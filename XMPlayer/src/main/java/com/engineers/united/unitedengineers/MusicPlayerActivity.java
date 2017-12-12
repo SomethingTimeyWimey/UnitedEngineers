@@ -51,6 +51,7 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
         btnNext=(ImageButton)findViewById(R.id.btnNext);
         btnPrevious=(ImageButton)findViewById(R.id.btnPrevious);
 
+
         songProgress.setOnSeekBarChangeListener(this);
 
         songRecyclerView=(RecyclerView) findViewById(R.id.songRecyclerView);
@@ -102,6 +103,8 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
                 playMySong(songs.get((songPosition)));
             }
         });
+
+
     }
 
     private void notifyDataChanged(int position, boolean playing) {
@@ -229,6 +232,7 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
             // currentSongId=song.getId();
             mMediaPlayer=MediaPlayer.create(getApplicationContext(), Uri.parse(song.getData()));
             mMediaPlayer.start();
+            mMediaPlayer.setLooping(true);
             btnPlay.setImageResource(android.R.drawable.ic_media_pause);
             songTotalDuration.setText(milliSecondsToTimer(song.getDuration()));
             updateSongProgress();
@@ -314,7 +318,6 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     public void onStopTrackingTouch(SeekBar seekBar) {
 
     }
-
 
 
     @Override
