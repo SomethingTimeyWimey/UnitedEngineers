@@ -10,5 +10,8 @@
     <string name="Radio">Radio</string>
     <string name="Favorites">Favoris</string>
     <string name="Settings">Paramètres</string>
-    <string name="Pin">Pin</string>
-</resources>
+    <string name="favorites">Favoris</string>
+    <string name="stations">Stations de radio</string>
+    <string name="MusicPlayer">Lecteur de musique</string>
+    <string name="Greatings">United Engineers-Bienvenue à notre application!!!</string>
+    <string name="FutureReleaseMessage">Cette fonctionnalité sera implémentée dans la future version</string></resources>
