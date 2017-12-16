@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     public boolean onTabSelected(int position, boolean wasSelected) {
         if(position==0)
         {
-            //RadioFragment radioFragment=new RadioFragment();
             StationListFragment stationFragment = new StationListFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id,stationFragment).commit();
         }else if(position==1)
