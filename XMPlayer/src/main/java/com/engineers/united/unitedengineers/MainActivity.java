@@ -36,10 +36,13 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         //CREATE ITEMS
         AHBottomNavigationItem radioItem=new AHBottomNavigationItem(R.string.Radio,R.drawable.radio,R.color.colorBottomNavigationAccent);
         AHBottomNavigationItem favoritesItem=new AHBottomNavigationItem(R.string.Favorites,R.drawable.favorites,R.color.colorBottomNavigationAccent);
+        AHBottomNavigationItem musicplayerItem=new AHBottomNavigationItem(R.string.MusicPlayer,R.drawable.mp3player,R.color.colorBottomNavigationAccent);
+
 
         //ADD ITEMS TO BAR
         bottomNavigation.addItem(radioItem);
         bottomNavigation.addItem(favoritesItem);
+        bottomNavigation.addItem(musicplayerItem);
 
         //PROPERTIES
         bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#191919"));
@@ -56,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         {
             FavoritesFragment favoritesFragment=new FavoritesFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id,favoritesFragment).commit();
+        }else if(position==2) {
+            Intent intent = new Intent(MainActivity.this, MusicPlayerActivity.class);
+            startActivity(intent);
         }
         return true;
     }
@@ -80,15 +86,16 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                 Toast.makeText(this, R.string.Greatings,Toast.LENGTH_LONG).show();
                 break;
 
-            case R.id.MusicPlayer:
+            /*case R.id.MusicPlayer:
                 Intent intent = new Intent(MainActivity.this, MusicPlayerActivity.class);
                 startActivity(intent);
                 break;
-
-            /*case R.id.GroupName:
-                Toast.makeText(this,"United Engineers-Welcome to Our Radio App!!!", Toast.LENGTH_LONG).show();
-                break;
             */
+
+            case R.id.GroupName:
+                Toast.makeText(this,"XMPlayer Creators", Toast.LENGTH_LONG).show();
+                break;
+
         }
         return super.onOptionsItemSelected(item);
     }

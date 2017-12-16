@@ -6,13 +6,6 @@
         android:title="@string/help_tab"
         android:id="@+id/Help"
         app:showAsAction="never" />
-
-    <item
-        android:title="@string/MusicPlayer"
-        android:id="@+id/MusicPlayer"
-        app:showAsAction="never"/>
-
-
     <item
         android:title="@string/GroupName"
         android:id="@+id/GroupName"

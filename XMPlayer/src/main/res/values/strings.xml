@@ -11,7 +11,7 @@
     <string name="Settings">Settings</string>
 	<string name="favorites">favorites</string>
     <string name="stations">Stations</string>
-    <string name="MusicPlayer">Music Player</string>
+    <string name="MusicPlayer">MP3</string>
     <string name="Greatings">United Engineers-Welcome to Our Radio App!!!</string>
     <string name="FutureReleaseMessage">This Feature Shall Be Implemented In Future Release!</string>
 </resources>
