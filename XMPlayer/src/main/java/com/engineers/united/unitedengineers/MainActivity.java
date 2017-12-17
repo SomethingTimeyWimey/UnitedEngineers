@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavoritesFragment;
+import com.engineers.united.unitedengineers.mFragments.FavouriteListFragment;
 import com.engineers.united.unitedengineers.mFragments.StationListFragment;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
@@ -56,8 +57,9 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id,stationFragment).commit();
         }else if(position==1)
         {
-            FavoritesFragment favoritesFragment=new FavoritesFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id,favoritesFragment).commit();
+            //FavoritesFragment favoritesFragment=new FavoritesFragment();
+            FavouriteListFragment favouritesFragment=new FavouriteListFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_id,favouritesFragment).commit();
         }else if(position==2) {
             Intent intent = new Intent(MainActivity.this, MusicPlayerActivity.class);
             startActivity(intent);
