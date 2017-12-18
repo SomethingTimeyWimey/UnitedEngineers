@@ -65,13 +65,13 @@ public class StationListFragment extends Fragment implements OnItemClickListener
 
     private void setStations() {
 
-        Station theEdge = new Station(1, "theEdge", "http://live.leanstream.co/CFNYFM?tunein");
-        Station virginRadio  = new Station(2, "VirginRadio", "http://18653.live.streamtheworld.com/CKFMFMAAC.aac?");
-        Station q107 = new Station(3, "Q107", "http://live.leanstream.co/CILQFM-MP3?tunein");
-        Station z103 = new Station(4, "Z103", "http://ice66.securenetsystems.net/CIDC2");
-        Station classicalFM = new Station(5, "ClassicalFM", "http://radiostream.zoomer.ca:8000/cfmo.mp3");
-        Station htzFM = new Station(6, "HTZFM", "http://16803.live.streamtheworld.com/CHTZFMAAC.aac?");
-        Station chumFM = new Station(7, "CHUMFM", "http://16143.live.streamtheworld.com/CHUMFMAAC_SC");
+        Station theEdge = new Station(1, "102.1 theEdge", "http://live.leanstream.co/CFNYFM?tunein");
+        Station virginRadio  = new Station(2, "99.9 VirginRadio", "http://18653.live.streamtheworld.com/CKFMFMAAC.aac?");
+        Station q107 = new Station(3, "Q107 CILQ-FM", "http://live.leanstream.co/CILQFM-MP3?tunein");
+        Station z103 = new Station(4, "Z103.5 CIDC-FM", "http://ice66.securenetsystems.net/CIDC2");
+        Station classicalFM = new Station(5, "96.3 Classical-FM", "http://radiostream.zoomer.ca:8000/cfmo.mp3");
+        Station htzFM = new Station(6, "97.7 HTZ-FM", "http://16803.live.streamtheworld.com/CHTZFMAAC.aac?");
+        Station chumFM = new Station(7, "104.5 CHUM-FM", "http://16143.live.streamtheworld.com/CHUMFMAAC_SC");
         stations = new ArrayList<Station>();
         stations.add(theEdge);
         stations.add(virginRadio);

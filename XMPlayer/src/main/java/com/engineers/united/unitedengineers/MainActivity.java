@@ -8,6 +8,7 @@ package com.engineers.united.unitedengineers;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -44,7 +45,8 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         bottomNavigation.addItem(musicplayerItem);
 
         //PROPERTIES
-        bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#191919"));
+        bottomNavigation.setAccentColor(ContextCompat.getColor(MainActivity.this, R.color.LightGolden));
+        bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#800000"));
         bottomNavigation.setCurrentItem(0);
     }
     @Override
