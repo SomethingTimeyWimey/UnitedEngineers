@@ -42,17 +42,17 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
         holder.songTitle.setText(song.getTitle());
         if(song.isPlaying())
         {
-            holder.btnPlay.setImageResource(android.R.drawable.ic_media_pause);
+            //holder.btnPlay.setImageResource(android.R.drawable.ic_media_pause);
             holder.songTitle.setTextColor(Color.BLUE);
             holder.songTitle.setTypeface(null, Typeface.BOLD);
 
         }else
         {
-            holder.btnPlay.setImageResource(android.R.drawable.ic_media_play);
+            //holder.btnPlay.setImageResource(android.R.drawable.ic_media_play);
             holder.songTitle.setTextColor(Color.BLACK);
             holder.songTitle.setTypeface(null, Typeface.NORMAL);
         }
-        holder.btnPlay.setOnClickListener(new View.OnClickListener() {
+        /*holder.btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!song.isPlaying())
@@ -60,7 +60,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
                     mainActivity.playRandomSong(position);
                 }
             }
-        });
+        });*/
     }
 
 
@@ -72,13 +72,13 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView songTitle;
-        ImageButton btnPlay;
+        //ImageButton btnPlay;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
             songTitle=(TextView)itemView.findViewById(R.id.songTitle);
-            btnPlay=(ImageButton) itemView.findViewById(R.id.btnPlay);
+            //btnPlay=(ImageButton) itemView.findViewById(R.id.btnPlay);
 
         }
     }
