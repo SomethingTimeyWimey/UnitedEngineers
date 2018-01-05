@@ -72,6 +72,15 @@ public class StationListFragment extends Fragment implements OnItemClickListener
         Station classicalFM = new Station(5, "96.3 Classical-FM", "http://radiostream.zoomer.ca:8000/cfmo.mp3");
         Station htzFM = new Station(6, "97.7 HTZ-FM", "http://16803.live.streamtheworld.com/CHTZFMAAC.aac?");
         Station chumFM = new Station(7, "104.5 CHUM-FM", "http://16143.live.streamtheworld.com/CHUMFMAAC_SC");
+        Station choqFM = new Station(8, "105.1 CHOQ-FM", "http://ice9.securenetsystems.net/CHOQ?&playSessionID=C4DEB4BF-FCBC-DE66-342C16E61E474857");
+        Station cjrtFM = new Station(9, "91.1 JAZZ-FM", "http://ice66.securenetsystems.net/CJRT?&playSessionID=C5DC9A16-940D-CC1C-8317B99521F411EB");
+        Station chbmFM = new Station(10, "97.3 BOOM", "http://ice66.securenetsystems.net/CJRT?&playSessionID=C5DC9A16-940D-CC1C-8317B99521F411EB");
+        Station cindFM = new Station(11, "88.1 INDIE", "http://indie.streamon.fm:8000/indie-48k.aac");
+        Station ckisFM = new Station(12, "92.5 KISS", "http://tor925.akacast.akamaistream.net/7/288/80873/v1/rogers.akacast.akamaistream.net/tor925");
+        Station cfrb = new Station(13, "1010 NEWSTALK", "http://16843.live.streamtheworld.com/CFRBAMAAC_SC");
+        Station cftr = new Station(14, "680 NEWS", "http://radio_cftr-lh.akamaihd.net/i/TOR680_1@176946/master.m3u8");
+        Station chfiFM = new Station(15, "98.1 CHFI", "http://tor981.akacast.akamaistream.net/7/550/80872/v1/rogers.akacast.akamaistream.net/tor981");
+
         stations = new ArrayList<Station>();
         stations.add(theEdge);
         stations.add(virginRadio);
@@ -80,6 +89,14 @@ public class StationListFragment extends Fragment implements OnItemClickListener
         stations.add(classicalFM);
         stations.add(htzFM);
         stations.add(chumFM);
+        stations.add(choqFM);
+        stations.add(cjrtFM);
+        stations.add(chbmFM);
+        stations.add(cindFM);
+        stations.add(ckisFM);
+        stations.add(cfrb);
+        stations.add(cftr);
+        stations.add(chfiFM);
     }
 
     private void findViewsById(View view) { stationListView = (ListView) view.findViewById(R.id.list_station);}

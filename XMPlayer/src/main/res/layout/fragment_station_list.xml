@@ -12,7 +12,8 @@
         android:dividerHeight="1dp"
         android:drawSelectorOnTop="true"
         android:footerDividersEnabled="false"
-        android:scrollbarStyle="outsideOverlay" >
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_marginBottom="?attr/actionBarSize">
     </ListView>
 
 </RelativeLayout>
