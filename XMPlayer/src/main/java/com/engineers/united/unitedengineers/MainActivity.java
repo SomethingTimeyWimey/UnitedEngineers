@@ -6,6 +6,8 @@ Entry point for the entire app
 package com.engineers.united.unitedengineers;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -18,9 +20,12 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavouriteListFragment;
 import com.engineers.united.unitedengineers.mFragments.StationListFragment;
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
     AHBottomNavigation bottomNavigation;
+    Cursor c = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,31 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         bottomNavigation= (AHBottomNavigation) findViewById(R.id.myBottomNavigation_ID);
         bottomNavigation.setOnTabSelectedListener(this);
         this.createNavItems();
+
+        //FINDING THE DATABASE WITH DATABASEHELPER CLASS
+        DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);
+        try {
+            myDbHelper.createDataBase();
+        } catch (IOException ioe) {
+            throw new Error("Unable to create database");
+        }
+        try {
+            myDbHelper.openDataBase();
+        } catch (SQLException sqle) {
+            throw sqle;
+        }
+        Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
+        c = myDbHelper.query("EMP_TABLE", null, null, null, null, null, null);
+        if (c.moveToFirst()) {
+            do {
+                Toast.makeText(MainActivity.this,
+                        "_id: " + c.getString(0) + "\n" +
+                                "E_NAME: " + c.getString(1) + "\n" +
+                                "E_LINK: " + c.getString(2) + "\n" +
+                                "E_DESCRI:  " + c.getString(3),
+                        Toast.LENGTH_LONG).show();
+            } while (c.moveToNext());
+        }
     }
     private void createNavItems()
     {
