@@ -87,11 +87,10 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                 Toast.makeText(this, R.string.Greatings,Toast.LENGTH_LONG).show();
                 break;
 
-            /*case R.id.MusicPlayer:
-                Intent intent = new Intent(MainActivity.this, MusicPlayerActivity.class);
+            case R.id.About:
+                Intent intent = new Intent(MainActivity.this, About.class);
                 startActivity(intent);
                 break;
-            */
 
             case R.id.GroupName:
                 Toast.makeText(this,"XMPlayer Creators", Toast.LENGTH_LONG).show();
