@@ -7,6 +7,10 @@
         android:id="@+id/Help"
         app:showAsAction="never" />
     <item
+        android:title="@string/about_us"
+        android:id="@+id/About"
+        app:showAsAction="never" />
+    <item
         android:title="@string/GroupName"
         android:id="@+id/GroupName"
         app:showAsAction="ifRoom" />

@@ -9,9 +9,10 @@
     <string name="Radio">Radio</string>
     <string name="Favorites">Favorites</string>
     <string name="Settings">Settings</string>
-	<string name="favorites">favorites</string>
+    <string name="favorites">favorites</string>
     <string name="stations">Stations</string>
     <string name="MusicPlayer">MP3</string>
-    <string name="Greatings">United Engineers-Welcome to Our Radio App!!!</string>
+    <string name="Greatings">United Engineers-Welcome to Our Radio App!</string>
     <string name="FutureReleaseMessage">This Feature Shall Be Implemented In Future Release!</string>
+    <string name="about_us">About Us</string>
 </resources>
