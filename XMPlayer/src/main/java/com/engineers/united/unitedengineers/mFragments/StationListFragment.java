@@ -108,7 +108,7 @@ public class StationListFragment extends Fragment implements OnItemClickListener
         String stream = station.getDescription();
 
         i = new Intent(getActivity(), RadioActivity.class);
-        i.putExtra("link", stream);
+        i.putExtra(getString(R.string.link), stream);
         startActivity(i);
         /*Use station.postion to decide which stream is being selected then run Radio activity*/
         //Toast.makeText(activity, station.toString(), Toast.LENGTH_LONG).show();
@@ -119,7 +119,7 @@ public class StationListFragment extends Fragment implements OnItemClickListener
 
         ImageView button = (ImageView) view.findViewById(R.id.imgbtn_favorite);
         String tag = button.getTag().toString();
-        if (tag.equalsIgnoreCase("grey")) {
+        if (tag.equalsIgnoreCase(getString(R.string.grey))) {
             sharedPreference.addFavorite(activity, stations.get(position));
             Toast.makeText(activity, activity.getResources().getString(R.string.add_favr), Toast.LENGTH_SHORT).show();
             button.setTag("red");

@@ -190,7 +190,7 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
 
 
                 } else {
-                    Toast.makeText(MusicPlayerActivity.this, "Sorry We Can't Show Songs!!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MusicPlayerActivity.this, getString(R.string.no_permission), Toast.LENGTH_SHORT).show();
 
                 }
                 return;

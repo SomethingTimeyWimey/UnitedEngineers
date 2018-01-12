@@ -44,8 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@android:drawable/ic_media_next"
-                android:background="@android:color/transparent"
-                />
+                android:background="@android:color/transparent" />
 
         </LinearLayout>
 
@@ -53,14 +52,13 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            >
+            android:gravity="center_vertical">
 
             <TextView
                 android:id="@+id/songCurrentPosition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00:00:00"/>
+                android:text="@string/start_duration"/>
             <SeekBar
                 android:id="@+id/songProgress"
                 android:layout_width="0dp"
@@ -71,8 +69,7 @@
                 android:id="@+id/songTotalDuration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00:00:00"/>
+                android:text="@string/start_duration"/>
         </LinearLayout>
-
     </LinearLayout>
 </LinearLayout>

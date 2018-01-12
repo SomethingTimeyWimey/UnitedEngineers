@@ -16,9 +16,9 @@ public class About extends AppCompatActivity {
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
                 .setImage(R.drawable.unitedengineerslogo)
-                .setDescription("Created By United Engineers")
-                .addItem(new Element().setTitle("Version 1.0"))
-                .addWebsite("https://github.com/SomethingTimeyWimey/UnitedEngineers")
+                .setDescription(getString(R.string.created_by))
+                .addItem(new Element().setTitle(getString(R.string.version_num)))
+                .addWebsite(getString(R.string.website))
                 .create();
 
                 setContentView(aboutPage);

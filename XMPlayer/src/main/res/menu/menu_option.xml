@@ -3,15 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:title="@string/help_tab"
-        android:id="@+id/Help"
-        app:showAsAction="never" />
-    <item
         android:title="@string/about_us"
         android:id="@+id/About"
         app:showAsAction="never" />
-    <item
-        android:title="@string/GroupName"
-        android:id="@+id/GroupName"
-        app:showAsAction="ifRoom" />
 </menu>

@@ -27,7 +27,7 @@ public class RadioActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
         Bundle bundle = getIntent().getExtras();
-        stream = bundle.getString("link");
+        stream = bundle.getString(getString(R.string.link));
         b_play = (Button) findViewById(R.id.b_play);
         b_play.setEnabled(false);
         b_play.setText(R.string.LOADING);

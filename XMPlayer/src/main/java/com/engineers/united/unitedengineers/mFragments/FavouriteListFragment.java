@@ -79,7 +79,7 @@ public class FavouriteListFragment extends Fragment{
                         String stream = station.getDescription();
 
                         i = new Intent(getActivity(), RadioActivity.class);
-                        i.putExtra("link", stream);
+                        i.putExtra(getString(R.string.link), stream);
                         startActivity(i);
                     }
                 });
@@ -92,17 +92,17 @@ public class FavouriteListFragment extends Fragment{
                                 ImageView button = (ImageView) view.findViewById(R.id.imgbtn_favorite);
 
                                 String tag = button.getTag().toString();
-                                if (tag.equalsIgnoreCase("grey")) {
+                                if (tag.equalsIgnoreCase(getString(R.string.grey))) {
                                     sharedPreference.addFavorite(activity, favorites.get(position));
                                     Toast.makeText(
                                             activity, activity.getResources().getString(R.string.add_favr),
                                             Toast.LENGTH_SHORT).show();
 
-                                    button.setTag("red");
+                                    button.setTag(getContext().getString(R.string.red));
                                     button.setImageResource(R.drawable.heart_red);
                                 } else {
                                     sharedPreference.removeFavorite(activity, favorites.get(position));
-                                    button.setTag("grey");
+                                    button.setTag(getContext().getString(R.string.grey));
                                     button.setImageResource(R.drawable.heart_grey);
                                     stationListAdapter.remove(favorites.get(position));
                                     Toast.makeText(
