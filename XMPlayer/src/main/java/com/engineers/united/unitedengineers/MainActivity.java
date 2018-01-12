@@ -24,7 +24,6 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
     AHBottomNavigation bottomNavigation;
-    Cursor c = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,30 +35,6 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         bottomNavigation.setOnTabSelectedListener(this);
         this.createNavItems();
 
-        //FINDING THE DATABASE WITH DATABASEHELPER CLASS
-        DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);
-        try {
-            myDbHelper.createDataBase();
-        } catch (IOException ioe) {
-            throw new Error("Unable to create database");
-        }
-        try {
-            myDbHelper.openDataBase();
-        } catch (SQLException sqle) {
-            throw sqle;
-        }
-        Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
-        c = myDbHelper.query("EMP_TABLE", null, null, null, null, null, null);
-        if (c.moveToFirst()) {
-            do {
-                Toast.makeText(MainActivity.this,
-                        "_id: " + c.getString(0) + "\n" +
-                                "E_NAME: " + c.getString(1) + "\n" +
-                                "E_LINK: " + c.getString(2) + "\n" +
-                                "E_DESCRI:  " + c.getString(3),
-                        Toast.LENGTH_LONG).show();
-            } while (c.moveToNext());
-        }
     }
     private void createNavItems()
     {
