@@ -18,9 +18,14 @@
     <string name="link">lien</string>
     <string name="grey">gris</string>
     <string name="red">rouge</string>
-    <string name="no_permission">Veuillez autoriser la permission d\'accéder à MP3</string>
+    <string name="no_permission">Veuillez autoriser la permission d`accéder à MP3</string>
     <string name="start_duration">00:00:00</string>
     <string name="created_by">XM Lecteur de musique Créé par United Engineers</string>
     <string name="version_num">Version 1.0</string>
     <string name="website">https://github.com/SomethingTimeyWimey/UnitedEngineers</string>
+    <string name="add_favr">Ajouté aux Favoris</string>
+    <string name="remove_favr">Retiré des Favoris</string>
+    <string name="no_favorites_items">Pas de Favoris</string>
+    <string name="no_favorites_msg">Appuyez longuement sur l`élément à ajouter aux favoris</string>
+    <string name="favorites_remove_msg">Appuyez longuement sur l`élément à supprimer des favoris</string>
 </resources>
