@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
     <!--<ImageButton
         android:id="@+id/btnPlay"
         android:src="@android:drawable/ic_media_play"

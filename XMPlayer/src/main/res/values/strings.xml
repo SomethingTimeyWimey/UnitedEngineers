@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">XMPlayer</string>
-    <string name="help_tab">Help</string>
     <string name="GroupName">United Engineers</string>
     <string name="LOADING">LOADING</string>
     <string name="PLAY">PLAY</string>
     <string name="PAUSE">PAUSE</string>
     <string name="Radio">Radio</string>
     <string name="Favorites">Favorites</string>
-    <string name="Settings">Settings</string>
     <string name="favorites">favorites</string>
     <string name="stations">Stations</string>
     <string name="MusicPlayer">MP3</string>
-    <string name="Greatings">United Engineers-Welcome to Our Radio App!</string>
-    <string name="FutureReleaseMessage">This Feature Shall Be Implemented In Future Release!</string>
     <string name="about_us">About Us</string>
+    <string name="closing_message">Are you sure you want to close this application?</string>
+    <string name="closing_title">Closing Application</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="link">link</string>
+    <string name="grey">grey</string>
+    <string name="red">red</string>
+    <string name="no_permission">Please Allow Permission To Access MP3</string>
+    <string name="start_duration">00:00:00</string>
+    <string name="created_by">XMPlayer Created By United Engineers</string>
+    <string name="version_num">Version 1.0</string>
+    <string name="website">https://github.com/SomethingTimeyWimey/UnitedEngineers</string>
 </resources>

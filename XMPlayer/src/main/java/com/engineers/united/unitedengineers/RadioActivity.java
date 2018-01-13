@@ -28,10 +28,14 @@ public class RadioActivity extends Activity {
         setContentView(R.layout.activity1);
         Bundle bundle = getIntent().getExtras();
 
+
         name = bundle.getString("name");
         description = bundle.getString("description");
         streamLink = bundle.getString("streamLink");
         imageURL = bundle.getString("imageURL");
+
+
+        streamLink = bundle.getString(getString(R.string.link));
 
         b_play = (Button) findViewById(R.id.b_play);
         b_play.setEnabled(false);

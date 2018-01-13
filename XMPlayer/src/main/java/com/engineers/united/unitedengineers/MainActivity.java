@@ -85,9 +85,9 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_dialog_alert)
-                .setTitle("Closing Activity")
-                .setMessage("Are you sure you want to close this activity?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                .setTitle(getString(R.string.closing_title))
+                .setMessage(getString(R.string.closing_message))
+                .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener()
                 {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                     }
 
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton(getString(R.string.no), null)
                 .show();
     }
 
@@ -109,19 +109,10 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
 
         switch (item.getItemId()) {
 
-            case R.id.Help:
-                Toast.makeText(this, R.string.Greatings,Toast.LENGTH_LONG).show();
-                break;
-
             case R.id.About:
                 Intent intent = new Intent(MainActivity.this, About.class);
                 startActivity(intent);
                 break;
-
-            case R.id.GroupName:
-                Toast.makeText(this,"XMPlayer Creators", Toast.LENGTH_LONG).show();
-                break;
-
         }
         return super.onOptionsItemSelected(item);
     }

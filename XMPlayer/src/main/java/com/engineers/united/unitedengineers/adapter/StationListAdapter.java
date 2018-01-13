@@ -77,10 +77,10 @@ public class StationListAdapter extends ArrayAdapter<Station> {
 		 * and set a tag*/
         if (checkFavoriteItem(station)) {
             holder.favoriteImg.setImageResource(R.drawable.heart_red);
-            holder.favoriteImg.setTag("red");
+            holder.favoriteImg.setTag(getContext().getString(R.string.red));
         } else {
             holder.favoriteImg.setImageResource(R.drawable.heart_grey);
-            holder.favoriteImg.setTag("grey");
+            holder.favoriteImg.setTag(getContext().getString(R.string.grey));
         }
 
         return convertView;
