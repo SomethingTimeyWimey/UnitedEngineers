@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "359265018675",
+    "firebase_url": "https://unitedengineers-49749.firebaseio.com",
+    "project_id": "unitedengineers-49749",
+    "storage_bucket": "unitedengineers-49749.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359265018675:android:7e84ad11652ad417",
+        "android_client_info": {
+          "package_name": "com.engineers.united.unitedengineers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359265018675-1lan925s7op8aanku9p7ad0tk8sfhnhe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.engineers.united.unitedengineers",
+            "certificate_hash": "35f6c711f158e9bc1ca094f9b894745b8a8d0684"
+          }
+        },
+        {
+          "client_id": "359265018675-er7l8in8ke38l5hn5aaa22c8kuhffa81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW7nWMUDLQr4VERXihS9eCohH4xm5OK8Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359265018675-er7l8in8ke38l5hn5aaa22c8kuhffa81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
