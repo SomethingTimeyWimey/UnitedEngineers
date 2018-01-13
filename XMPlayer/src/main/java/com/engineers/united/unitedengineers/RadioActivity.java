@@ -20,14 +20,19 @@ public class RadioActivity extends Activity {
     MediaPlayer mediaPlayer;
     boolean prepared = false;
     boolean started = false;
-    String stream;
+    String name, streamLink, description, imageURL;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
         Bundle bundle = getIntent().getExtras();
-        stream = bundle.getString("link");
+
+        name = bundle.getString("name");
+        description = bundle.getString("description");
+        streamLink = bundle.getString("streamLink");
+        imageURL = bundle.getString("imageURL");
+
         b_play = (Button) findViewById(R.id.b_play);
         b_play.setEnabled(false);
         b_play.setText(R.string.LOADING);
@@ -35,7 +40,7 @@ public class RadioActivity extends Activity {
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-        new PlayerTask().execute(stream);
+        new PlayerTask().execute(streamLink);
 
         b_play.setOnClickListener(new View.OnClickListener() {
             @Override

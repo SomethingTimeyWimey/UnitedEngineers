@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,12 @@ import com.engineers.united.unitedengineers.RadioActivity;
 import com.engineers.united.unitedengineers.adapter.StationListAdapter;
 import com.engineers.united.unitedengineers.beans.Station;
 import com.engineers.united.unitedengineers.utils.SharedPreference;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import static android.content.ContentValues.TAG;
 
 
 /**
@@ -42,12 +49,29 @@ public class StationListFragment extends Fragment implements OnItemClickListener
     List<Station> stations;
     StationListAdapter stationListAdapter;
     SharedPreference sharedPreference;
+    private FirebaseDatabase mDatabase;
+    private DatabaseReference reference;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activity = getActivity();
         sharedPreference = new SharedPreference();
+        mDatabase = FirebaseDatabase.getInstance();
+        reference = mDatabase.getReference("MyMessage");
+
+    reference.addValueEventListener(new ValueEventListener() {
+        @Override
+        public void onDataChange(DataSnapshot dataSnapshot) {
+       String value = dataSnapshot.getValue(String.class);
+
+        }
+
+        @Override
+        public void onCancelled(DatabaseError databaseError) {
+
+        }
+    });
     }
 
     @Override
@@ -55,6 +79,8 @@ public class StationListFragment extends Fragment implements OnItemClickListener
 
         View view = inflater.inflate(R.layout.fragment_station_list, container, false);
         findViewsById(view);
+        stations = new ArrayList<Station>();
+
         setStations();
         stationListAdapter = new StationListAdapter(activity, stations);
         stationListView.setAdapter(stationListAdapter);
@@ -65,21 +91,21 @@ public class StationListFragment extends Fragment implements OnItemClickListener
 
     private void setStations() {
 
-        Station theEdge = new Station(1, "102.1 theEdge", "http://live.leanstream.co/CFNYFM?tunein");
-        Station virginRadio  = new Station(2, "99.9 VirginRadio", "http://16143.live.streamtheworld.com/CKFMFMAAC_SC");
-        Station q107 = new Station(3, "Q107 CILQ-FM", "http://live.leanstream.co/CILQFM-MP3?tunein");
-        Station z103 = new Station(4, "Z103.5 CIDC-FM", "http://ice66.securenetsystems.net/CIDC2");
-        Station classicalFM = new Station(5, "96.3 Classical-FM", "http://radiostream.zoomer.ca:8000/cfmo.mp3");
-        Station htzFM = new Station(6, "97.7 HTZ-FM", "http://16803.live.streamtheworld.com/CHTZFMAAC.aac?");
-        Station chumFM = new Station(7, "104.5 CHUM-FM", "http://16143.live.streamtheworld.com/CHUMFMAAC_SC");
-        Station choqFM = new Station(8, "105.1 CHOQ-FM", "http://ice9.securenetsystems.net/CHOQ?&playSessionID=C4DEB4BF-FCBC-DE66-342C16E61E474857");
-        Station cjrtFM = new Station(9, "91.1 JAZZ-FM", "http://ice66.securenetsystems.net/CJRT?&playSessionID=C5DC9A16-940D-CC1C-8317B99521F411EB");
-        Station chbmFM = new Station(10, "97.3 BOOM", "http://ice66.securenetsystems.net/CJRT?&playSessionID=C5DC9A16-940D-CC1C-8317B99521F411EB");
-        Station cindFM = new Station(11, "88.1 INDIE", "http://indie.streamon.fm:8000/indie-48k.aac");
-        Station ckisFM = new Station(12, "92.5 KISS", "http://tor925.akacast.akamaistream.net/7/288/80873/v1/rogers.akacast.akamaistream.net/tor925");
-        Station cfrb = new Station(13, "1010 NEWSTALK", "http://16843.live.streamtheworld.com/CFRBAMAAC_SC");
-        Station cftr = new Station(14, "680 NEWS", "http://radio_cftr-lh.akamaihd.net/i/TOR680_1@176946/master.m3u8");
-        Station chfiFM = new Station(15, "98.1 CHFI", "http://tor981.akacast.akamaistream.net/7/550/80872/v1/rogers.akacast.akamaistream.net/tor981");
+        Station theEdge = new Station(1, "102.1 theEdge", "http://live.leanstream.co/CFNYFM?tunein",null,null);
+        Station virginRadio  = new Station(2, "99.9 VirginRadio", "http://16143.live.streamtheworld.com/CKFMFMAAC_SC",null,null);
+        Station q107 = new Station(3, "Q107 CILQ-FM", "http://live.leanstream.co/CILQFM-MP3?tunein",null,null);
+        Station z103 = new Station(4, "Z103.5 CIDC-FM", "http://ice66.securenetsystems.net/CIDC2",null,null);
+        Station classicalFM = new Station(5, "96.3 Classical-FM", "http://radiostream.zoomer.ca:8000/cfmo.mp3",null,null);
+        Station htzFM = new Station(6, "97.7 HTZ-FM", "http://16803.live.streamtheworld.com/CHTZFMAAC.aac?",null,null);
+        Station chumFM = new Station(7, "104.5 CHUM-FM", "http://16143.live.streamtheworld.com/CHUMFMAAC_SC",null,null);
+        Station choqFM = new Station(8, "105.1 CHOQ-FM", "http://ice9.securenetsystems.net/CHOQ?&playSessionID=C4DEB4BF-FCBC-DE66-342C16E61E474857",null,null);
+        Station cjrtFM = new Station(9, "91.1 JAZZ-FM", "http://ice66.securenetsystems.net/CJRT?&playSessionID=C5DC9A16-940D-CC1C-8317B99521F411EB",null,null);
+        Station chbmFM = new Station(10, "97.3 BOOM", "http://ice66.securenetsystems.net/CJRT?&playSessionID=C5DC9A16-940D-CC1C-8317B99521F411EB",null,null);
+        Station cindFM = new Station(11, "88.1 INDIE", "http://indie.streamon.fm:8000/indie-48k.aac",null,null);
+        Station ckisFM = new Station(12, "92.5 KISS", "http://tor925.akacast.akamaistream.net/7/288/80873/v1/rogers.akacast.akamaistream.net/tor925",null,null);
+        Station cfrb = new Station(13, "1010 NEWSTALK", "http://16843.live.streamtheworld.com/CFRBAMAAC_SC",null,null);
+        Station cftr = new Station(14, "680 NEWS", "http://radio_cftr-lh.akamaihd.net/i/TOR680_1@176946/master.m3u8",null,null);
+        Station chfiFM = new Station(15, "98.1 CHFI", "http://tor981.akacast.akamaistream.net/7/550/80872/v1/rogers.akacast.akamaistream.net/tor981",null,null);
 
         stations = new ArrayList<Station>();
         stations.add(theEdge);
@@ -105,10 +131,17 @@ public class StationListFragment extends Fragment implements OnItemClickListener
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         Station station = (Station) parent.getItemAtPosition(position);
-        String stream = station.getDescription();
+
+        String name = station.getName();
+        String streamLink = station.getLink();
+        String description = station.getDescription();
+        String imageURL = station.getImageURL();
 
         i = new Intent(getActivity(), RadioActivity.class);
-        i.putExtra("link", stream);
+        i.putExtra("name", name);
+        i.putExtra("streamLink", streamLink);
+        i.putExtra("description", description);
+        i.putExtra("imageURL", imageURL);
         startActivity(i);
         /*Use station.postion to decide which stream is being selected then run Radio activity*/
         //Toast.makeText(activity, station.toString(), Toast.LENGTH_LONG).show();

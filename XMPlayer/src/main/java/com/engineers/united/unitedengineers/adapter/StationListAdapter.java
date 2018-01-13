@@ -36,7 +36,6 @@ public class StationListAdapter extends ArrayAdapter<Station> {
 
     private class ViewHolder {
         TextView stationNameTxt;
-        TextView stationDescTxt;
         ImageView favoriteImg;
     }
 
@@ -64,7 +63,6 @@ public class StationListAdapter extends ArrayAdapter<Station> {
             convertView = inflater.inflate(R.layout.station_list_item, null);
             holder = new ViewHolder();
             holder.stationNameTxt = (TextView) convertView.findViewById(R.id.txt_sta_name);
-            //holder.stationDescTxt = (TextView) convertView.findViewById(R.id.txt_sta_desc);
 
             holder.favoriteImg = (ImageView) convertView.findViewById(R.id.imgbtn_favorite);
 
@@ -74,7 +72,6 @@ public class StationListAdapter extends ArrayAdapter<Station> {
         }
         Station station = (Station) getItem(position);
         holder.stationNameTxt.setText(station.getName());
-        //holder.stationDescTxt.setText(station.getDescription());
 
 		/*If a station exists in shared preferences then set heart_red drawable
 		 * and set a tag*/
