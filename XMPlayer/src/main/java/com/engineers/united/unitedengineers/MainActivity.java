@@ -21,8 +21,13 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavouriteListFragment;
 import com.engineers.united.unitedengineers.mFragments.StationListFragment;
 
+/**
+ * Created by aldo
+ */
+
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
     AHBottomNavigation bottomNavigation;
+    //CREATED THE BOTTOM NAVIGATION TOOLBAR USING THE ACTIVITY_MAIN LAYOUT FILE
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,22 +40,24 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     }
     private void createNavItems()
     {
-        //CREATE ITEMS
+        //CREATE ITEMS TO DISPLAY ON BOTTOM NAVIGATION BAR
         AHBottomNavigationItem radioItem=new AHBottomNavigationItem(R.string.Radio,R.drawable.radio,R.color.colorBottomNavigationAccent);
         AHBottomNavigationItem favoritesItem=new AHBottomNavigationItem(R.string.Favorites,R.drawable.favorites,R.color.colorBottomNavigationAccent);
         AHBottomNavigationItem musicplayerItem=new AHBottomNavigationItem(R.string.MusicPlayer,R.drawable.mp3player,R.color.colorBottomNavigationAccent);
 
 
-        //ADD ITEMS TO BAR
+        //ADD ITEMS TO BOTTOM NAVIGATION BAR
         bottomNavigation.addItem(radioItem);
         bottomNavigation.addItem(favoritesItem);
         bottomNavigation.addItem(musicplayerItem);
 
-        //PROPERTIES
+        //PROPERTIES GIVEN TO THE BOTTOM NAVIGATION BAR ICONS
         bottomNavigation.setAccentColor(ContextCompat.getColor(MainActivity.this, R.color.LightGolden));
         bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#800000"));
         bottomNavigation.setCurrentItem(0);
     }
+    //CREATED onTabSelected WHICH ALLOWS MOVEMENT BETWEEN FRAGMENTS. IF ON SELECTED FRAGMENT, THE OTHER FRAGMENTS
+    //WILL TURN GREY. I WAS ALSO ABLE TO MOVE THE MP3 ACTIVITY AS A FRAGMENT IN OUR BOTTOM NAVIGATION BAR.
     @Override
     public boolean onTabSelected(int position, boolean wasSelected) {
         if(position==0)
@@ -68,14 +75,14 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         }
         return true;
     }
-
+    //CREATED MENU FOR OUR TOOLBAR IN ORDER TO HAVE THE ABOUT PAGE
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_option, menu);
         return true;
     }
-
+    //CREATED ON BACK PRESSED WHICH GIVES THE USER A DIALOG BOX CONFIRMING IF THEY WANT TO EXIT THE APP OR NOT
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
@@ -93,7 +100,8 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                 .setNegativeButton(getString(R.string.no), null)
                 .show();
     }
-
+    //CREATED LOGIC BEHIND ABOUT PAGE. WHEN SELECTED, IT WILL GO TO THE APPROPRIATE CLASS AND DISPLAY THE
+    //APPROPRIATE FILE
     public boolean onOptionsItemSelected(MenuItem item) {
         //Handle action bar item clicks here. The action bar will
         //automatically handle clicks on the Home/Up button, so long
