@@ -7,12 +7,15 @@ package com.engineers.united.unitedengineers;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -20,6 +23,8 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavouriteListFragment;
 import com.engineers.united.unitedengineers.mFragments.StationListFragment;
+
+import java.util.Locale;
 
 /**
  * Created by aldo
@@ -115,6 +120,27 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             case R.id.About:
                 Intent intent = new Intent(MainActivity.this, About.class);
                 startActivity(intent);
+                break;
+
+            case R.id.en:
+                Locale locale = new Locale("en");
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+                Toast.makeText(this, "Translated to English!", Toast.LENGTH_LONG).show();
+                recreate();
+                break;
+
+            case R.id.fr:
+                Locale locale2 = new Locale("fr");
+                Locale.setDefault(locale2);
+                Configuration config2 = new Configuration();
+                config2.locale = locale2;
+                getBaseContext().getResources().updateConfiguration(config2, getBaseContext().getResources().getDisplayMetrics());
+
+                Toast.makeText(this, "Translated to French!", Toast.LENGTH_LONG).show();
+                recreate();
                 break;
         }
         return super.onOptionsItemSelected(item);

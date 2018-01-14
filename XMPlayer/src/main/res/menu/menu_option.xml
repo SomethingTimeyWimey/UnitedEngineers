@@ -6,4 +6,12 @@
         android:title="@string/about_us"
         android:id="@+id/About"
         app:showAsAction="never" />
+    <item
+        android:title="English Translation"
+        android:id="@+id/en"
+        app:showAsAction="never" />
+    <item
+        android:title="French Translation"
+        android:id="@+id/fr"
+        app:showAsAction="never" />
 </menu>
