@@ -2,7 +2,6 @@
     United Engineers
     this activity is a getter/setter for class song
  */
-
 package com.engineers.united.unitedengineers;
 
 public class Song {
