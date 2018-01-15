@@ -76,7 +76,7 @@ public class FavouriteListFragment extends Fragment{
                 favoriteList.setOnItemClickListener(new OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parent, View arg1, int position, long arg3) {
                         Station station = (Station) parent.getItemAtPosition(position);
-                        String stream = station.getDescription();
+                        String stream = station.getLink();
 
                         i = new Intent(getActivity(), RadioActivity.class);
                         i.putExtra(getString(R.string.link), stream);

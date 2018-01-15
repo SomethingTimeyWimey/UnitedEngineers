@@ -15,7 +15,7 @@
     <string name="closing_title">Closing Application</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="link">link</string>
+    <string name="link">streamLink</string>
     <string name="grey">grey</string>
     <string name="red">red</string>
     <string name="no_permission">Please Allow Permission To Access MP3</string>
