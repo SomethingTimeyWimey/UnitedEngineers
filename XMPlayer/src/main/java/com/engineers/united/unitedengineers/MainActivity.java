@@ -9,6 +9,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.database.Cursor;
+import android.database.SQLException;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -23,6 +25,7 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavouriteListFragment;
 import com.engineers.united.unitedengineers.mFragments.StationListFragment;
+import java.io.IOException;
 
 import java.util.Locale;
 
@@ -33,6 +36,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
     AHBottomNavigation bottomNavigation;
     //CREATED THE BOTTOM NAVIGATION TOOLBAR USING THE ACTIVITY_MAIN LAYOUT FILE
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         bottomNavigation= (AHBottomNavigation) findViewById(R.id.myBottomNavigation_ID);
         bottomNavigation.setOnTabSelectedListener(this);
         this.createNavItems();
+
     }
     private void createNavItems()
     {
@@ -58,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
 
         //PROPERTIES GIVEN TO THE BOTTOM NAVIGATION BAR ICONS
         bottomNavigation.setAccentColor(ContextCompat.getColor(MainActivity.this, R.color.LightGolden));
-        bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#800000"));
+        bottomNavigation.setDefaultBackgroundColor(Color.parseColor(getString(R.string.backgroundColorString)));
         bottomNavigation.setCurrentItem(0);
     }
     //CREATED onTabSelected WHICH ALLOWS MOVEMENT BETWEEN FRAGMENTS. IF ON SELECTED FRAGMENT, THE OTHER FRAGMENTS

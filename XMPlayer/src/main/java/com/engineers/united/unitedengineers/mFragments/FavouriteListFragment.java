@@ -76,10 +76,17 @@ public class FavouriteListFragment extends Fragment{
                 favoriteList.setOnItemClickListener(new OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parent, View arg1, int position, long arg3) {
                         Station station = (Station) parent.getItemAtPosition(position);
-                        String stream = station.getDescription();
+
+                        String description = station.getDescription();
+                        String streamLink = station.getLink();
+                        String imageURL = station.getImageURL();
 
                         i = new Intent(getActivity(), RadioActivity.class);
-                        i.putExtra(getString(R.string.link), stream);
+
+                        i.putExtra(getActivity().getString(R.string.description), description);
+                        i.putExtra(getActivity().getString(R.string.link), streamLink);
+                        i.putExtra(getActivity().getString(R.string.imageurl), imageURL);
+
                         startActivity(i);
                     }
                 });
@@ -125,7 +132,7 @@ public class FavouriteListFragment extends Fragment{
             alertDialog.setCancelable(false);
 
             // setting OK Button
-            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
+            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok),
                     new DialogInterface.OnClickListener() {
 
                         public void onClick(DialogInterface dialog, int which) {
