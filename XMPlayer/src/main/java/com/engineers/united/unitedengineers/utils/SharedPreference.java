@@ -59,6 +59,7 @@ public class SharedPreference {
         }
     }
 
+    //get favourites in JSON format and convert to gson and and to an arraylist
     public ArrayList<Station> getFavorites(Context context) {
         SharedPreferences settings;
         List<Station> favorites;

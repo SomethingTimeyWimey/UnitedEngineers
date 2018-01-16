@@ -56,7 +56,7 @@ public class FavouriteListFragment extends Fragment{
         // Get favorite items from SharedPreferences.
         sharedPreference = new SharedPreference();
         favorites = sharedPreference.getFavorites(activity);
-
+        //Checking if anything is available
         if (favorites == null) {
             showAlert(
                     getResources().getString(R.string.no_favorites_items),
@@ -68,13 +68,14 @@ public class FavouriteListFragment extends Fragment{
                         getResources().getString(R.string.no_favorites_msg));
             }
             favoriteList = (ListView) view.findViewById(R.id.list_station);
-
+            //Whether or not favourites is empty we still need the listview
             if (favorites != null) {
                 stationListAdapter = new StationListAdapter(activity, favorites);
                 favoriteList.setAdapter(stationListAdapter);
 
                 favoriteList.setOnItemClickListener(new OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parent, View arg1, int position, long arg3) {
+                        //Copied code from StationListFragment onItemClick
                         Station station = (Station) parent.getItemAtPosition(position);
 
                         String description = station.getDescription();
@@ -91,6 +92,9 @@ public class FavouriteListFragment extends Fragment{
                     }
                 });
 
+                //set our heart image to red or grey
+                //however if its on favouritelistfragment it will be red by default
+                //and grey only for a moment then it will be removed from the list
                 favoriteList.setOnItemLongClickListener(new OnItemLongClickListener() {
 
                             @Override
@@ -125,6 +129,7 @@ public class FavouriteListFragment extends Fragment{
     }
 
     public void showAlert(String title, String message) {
+        //if favourites is empty display a dialog box that instructs the user how to add a favourite
         if (activity != null && !activity.isFinishing()) {
             AlertDialog alertDialog = new AlertDialog.Builder(activity).create();
             alertDialog.setTitle(title);
@@ -147,8 +152,6 @@ public class FavouriteListFragment extends Fragment{
 
     @Override
     public void onResume() {
-        //getActivity().setTitle(R.string.favorites);
-        //getActivity().getActionBar().setTitle(R.string.favorites);
         super.onResume();
     }
 }

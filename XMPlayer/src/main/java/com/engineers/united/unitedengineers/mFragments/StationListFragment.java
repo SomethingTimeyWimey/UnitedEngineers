@@ -92,6 +92,8 @@ public class StationListFragment extends Fragment implements OnItemClickListener
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                //A lot of repeated code to read in all our strings from our Firebase Database
+                //This should be done in a for loop...
 
                 if (dataSnapshot.exists()){
 
@@ -201,7 +203,7 @@ public class StationListFragment extends Fragment implements OnItemClickListener
     }
 
     private void setStations() {
-
+        //Read in all our strings into an array list of type station
         Station theEdge = new Station(1, theEdgeNAME, theEdgeLINK,theEdgeDESCRIPTION,theEdgeURL);
         Station virginRadio  = new Station(2, virginRadioNAME, virginRadioLINK,virginRadioDESCRIPTION,virginRadioURL);
         Station q107 = new Station(3, q107NAME, q107LINK,q107DESCRIPTION,q107URL);
@@ -260,7 +262,7 @@ public class StationListFragment extends Fragment implements OnItemClickListener
 
     @Override
     public boolean onItemLongClick(AdapterView<?> arg0, View view, int position, long arg3) {
-
+    //Handles all the favouriting tasks .  This function is repated in FavouriteListFragment
         ImageView button = (ImageView) view.findViewById(R.id.imgbtn_favorite);
         String tag = button.getTag().toString();
         if (tag.equalsIgnoreCase(getString(R.string.grey))) {

@@ -32,8 +32,8 @@ public class RadioActivity extends Activity {
     String fileName[];
     Button b_play;
     MediaPlayer mediaPlayer;
-    boolean prepared = false;
-    boolean started = false;
+    boolean prepared = false;          //These are just for checking if were ready to play the stream
+    boolean started = false;          //and if the stream has started
     String name, streamLink, description, imageURL;
     ImageView mImageView;
     URL url1;
@@ -42,12 +42,14 @@ public class RadioActivity extends Activity {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
-        Bundle bundle = getIntent().getExtras();
 
+        //Leave Radio Page open until user locks the phone or exits the page
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         Toast.makeText(this, getResources().getString(R.string.radioToast), Toast.LENGTH_LONG).show();
 
+        //Passing string values from onItemClick() in StationListFragment
+        Bundle bundle = getIntent().getExtras();
         streamLink = bundle.getString(getString(R.string.link));
         imageURL = bundle.getString(getString(R.string.imageurl));
         description = bundle.getString(getString(R.string.description));
@@ -58,13 +60,14 @@ public class RadioActivity extends Activity {
         b_play = (Button) findViewById(R.id.b_play);
         b_play.setEnabled(false);
         b_play.setText(R.string.LOADING);
-        
+
+        //Setting up madia player here
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
         new PlayerTask().execute(streamLink);
 
-
+        //checking for a real URL that gets passed in from bundle
         try {
             url1  = new URL(imageURL);
         } catch (MalformedURLException e) {
@@ -73,6 +76,7 @@ public class RadioActivity extends Activity {
         }
         new DownloadFilesTask().execute(url1);
 
+        //Setting pause/play button, after the loading is complete
         b_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -89,6 +93,7 @@ public class RadioActivity extends Activity {
         });
     }
 
+    //This task is for setting our radio stream with the first string passed in doInBackground
     class PlayerTask extends AsyncTask<String, Void, Boolean> {
         @Override
         protected Boolean doInBackground(String...strings){
@@ -112,6 +117,7 @@ public class RadioActivity extends Activity {
         }
     }
 
+    //This one handles download the image files ASync with the URL passed in with bundle
     private class DownloadFilesTask extends AsyncTask<URL, Integer, Long> {
 
         @Override
@@ -130,6 +136,7 @@ public class RadioActivity extends Activity {
 
         private long DownloadFile(URL url, int j) {
 
+            //Checking again if the URL is legit http
             int total = 0;
             try {
                 URLConnection conn = url.openConnection();
@@ -138,7 +145,6 @@ public class RadioActivity extends Activity {
 
 
                 HttpURLConnection httpConn  = (HttpURLConnection) conn;
-
                 httpConn.setAllowUserInteraction(false);
                 httpConn.setInstanceFollowRedirects(true);
                 httpConn.setRequestMethod("GET");
@@ -148,7 +154,7 @@ public class RadioActivity extends Activity {
                 if (response == HttpURLConnection.HTTP_OK) {
                     InputStream input = httpConn.getInputStream();
 
-
+                    //Creates necessary path for image file and image name
                     String[] path = url.getPath().split("/");
                     String imageName = path[path.length - 1];
                     String PATH = getFilesDir() + "/Download/" ;
@@ -179,6 +185,7 @@ public class RadioActivity extends Activity {
         }
 
         protected void onPostExecute(Long result) {
+            //Set image into RadioActivity Image view
             mImageView = (ImageView) findViewById(R.id.im1);
             Bitmap myBitmap = BitmapFactory.decodeFile(fileName[0]);
             mImageView.setImageBitmap(myBitmap);
