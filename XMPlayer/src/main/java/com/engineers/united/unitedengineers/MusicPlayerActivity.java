@@ -40,7 +40,6 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
     SongAdapter songAdapter;
     Handler mHandler=new Handler();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -319,6 +318,4 @@ public class MusicPlayerActivity extends Activity implements SeekBar.OnSeekBarCh
 
         super.onBackPressed();
     }
-
-
 }

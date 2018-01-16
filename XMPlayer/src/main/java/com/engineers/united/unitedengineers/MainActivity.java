@@ -8,16 +8,12 @@ package com.engineers.united.unitedengineers;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.database.Cursor;
-import android.database.SQLException;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -25,7 +21,6 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.engineers.united.unitedengineers.mFragments.FavouriteListFragment;
 import com.engineers.united.unitedengineers.mFragments.StationListFragment;
-import java.io.IOException;
 
 import java.util.Locale;
 
@@ -128,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                 break;
 
             case R.id.en:
-                Locale locale = new Locale("en");
+                Locale locale = new Locale(getString(R.string.en));
                 Locale.setDefault(locale);
                 Configuration config = new Configuration();
                 config.locale = locale;
@@ -138,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                 break;
 
             case R.id.fr:
-                Locale locale2 = new Locale("fr");
+                Locale locale2 = new Locale(getString(R.string.fr));
                 Locale.setDefault(locale2);
                 Configuration config2 = new Configuration();
                 config2.locale = locale2;

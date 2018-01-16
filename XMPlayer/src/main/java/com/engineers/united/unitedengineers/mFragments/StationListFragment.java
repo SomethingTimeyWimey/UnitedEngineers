@@ -88,8 +88,6 @@ public class StationListFragment extends Fragment implements OnItemClickListener
         mDatabase = FirebaseDatabase.getInstance();
         reference = mDatabase.getReference(getString(R.string.stations));
 
-       // stations = new ArrayList<Station>();
-
         reference.addValueEventListener(new ValueEventListener() {
 
             @Override
@@ -258,7 +256,6 @@ public class StationListFragment extends Fragment implements OnItemClickListener
 
         startActivity(i);
         /*Use station.postion to decide which stream is being selected then run Radio activity*/
-        //Toast.makeText(activity, station.toString(), Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -283,8 +280,6 @@ public class StationListFragment extends Fragment implements OnItemClickListener
 
     @Override
     public void onResume() {
-        //getActivity().setTitle(R.string.app_name);
-        //getActivity().getActionBar().setTitle(R.string.app_name);
         super.onResume();
     }
 }

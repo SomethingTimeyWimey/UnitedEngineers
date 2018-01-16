@@ -35,6 +35,7 @@
     <string name="translate_french">Translated to French!</string>
     <string name="english_translate_tab">English Translation</string>
     <string name="french_translate_tab">French Translation</string>
-    <string name="radioToast">Please allow up to 30 seconds for radio stream to load</string>
-
+    <string name="fr">fr</string>
+    <string name="en">en</string>
+    <string name="radioToast">Please Allow Up To 30 Seconds For Radio Stream To Load</string>
 </resources>

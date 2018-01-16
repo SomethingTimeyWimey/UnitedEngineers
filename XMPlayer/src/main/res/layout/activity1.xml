@@ -16,7 +16,7 @@
         tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="230dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"/>
 
     <ImageView
         android:id="@+id/im1"
@@ -25,7 +25,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="109dp"
-        app:srcCompat="@color/LightYellow" />
+        app:srcCompat="@color/LightYellow"/>
 
     <TextView
         android:id="@+id/descripView"
@@ -33,7 +33,5 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="95dp"
-    />
-
+        android:layout_marginBottom="95dp"/>
 </RelativeLayout>

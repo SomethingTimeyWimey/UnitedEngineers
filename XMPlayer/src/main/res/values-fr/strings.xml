@@ -31,4 +31,5 @@
     <string name="translate_french">Traduit en français!</string>
     <string name="english_translate_tab">Traduction anglaise</string>
     <string name="french_translate_tab">Traduction française</string>
+    <string name="radioToast">S`il vous plaît permettre jusqu`à 30 secondes pour le flux radio à charger</string>
 </resources>

@@ -152,4 +152,3 @@ public class FavouriteListFragment extends Fragment{
         super.onResume();
     }
 }
-

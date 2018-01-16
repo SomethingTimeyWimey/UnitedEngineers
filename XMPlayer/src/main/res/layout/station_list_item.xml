@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@color/LightYellow"
-    android:descendantFocusability="blocksDescendants" >
+    android:descendantFocusability="blocksDescendants">
 
     <RelativeLayout
         android:id="@+id/pdt_layout_item"
@@ -23,27 +23,18 @@
             android:textStyle="bold"
             android:padding="12dp"/>
 
-        <!-- <TextView
-            android:id="@+id/txt_sta_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/txt_sta_name"
-            android:padding="6dp" /> -->
-
         <ImageView
             android:id="@+id/imgbtn_favorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:background="@null"
-            android:contentDescription="@string/favorites" />
+            android:contentDescription="@string/favorites"/>
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@+id/pdt_layout_item"
-        android:background="@color/LightYellow" />
-
+        android:background="@color/LightYellow"/>
 </RelativeLayout>

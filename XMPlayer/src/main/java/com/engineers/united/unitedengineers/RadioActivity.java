@@ -12,6 +12,7 @@ import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -42,6 +43,8 @@ public class RadioActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
         Bundle bundle = getIntent().getExtras();
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         Toast.makeText(this, getResources().getString(R.string.radioToast), Toast.LENGTH_LONG).show();
 
@@ -86,12 +89,6 @@ public class RadioActivity extends Activity {
         });
     }
 
-  /*  public void CancelDownload(View view){
-        Toast.makeText(this, "CancelDownload", Toast.LENGTH_LONG).show();
-        DownloadFilesTask.cancel(true);
-
-    }*/
-
     class PlayerTask extends AsyncTask<String, Void, Boolean> {
         @Override
         protected Boolean doInBackground(String...strings){
@@ -107,7 +104,7 @@ public class RadioActivity extends Activity {
             return prepared;
         }
         @Override
-        protected void onPostExecute(Boolean aBoolean){
+            protected void onPostExecute(Boolean aBoolean){
             super.onPostExecute(aBoolean);
             b_play.setEnabled(true);
             b_play.setText(R.string.PLAY);
@@ -186,15 +183,6 @@ public class RadioActivity extends Activity {
             Bitmap myBitmap = BitmapFactory.decodeFile(fileName[0]);
             mImageView.setImageBitmap(myBitmap);
         }
-
-
-       /* protected void onProgressUpdate(Integer... values) {progress.incrementProgressBy(values[0]);}*/
-
-       /* protected void onCancelled() {
-
-            Toast.makeText(this, "on Cancelled called", Toast.LENGTH_LONG).show();
-
-        }*/
     }
 
     @Override
