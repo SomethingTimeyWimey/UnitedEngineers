@@ -43,6 +43,8 @@ public class RadioActivity extends Activity {
         setContentView(R.layout.activity1);
         Bundle bundle = getIntent().getExtras();
 
+        Toast.makeText(this, getResources().getString(R.string.radioToast), Toast.LENGTH_LONG).show();
+
         streamLink = bundle.getString(getString(R.string.link));
         imageURL = bundle.getString(getString(R.string.imageurl));
         description = bundle.getString(getString(R.string.description));
