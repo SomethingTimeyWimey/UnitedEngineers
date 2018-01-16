@@ -28,4 +28,8 @@
     <string name="no_favorites_items">Pas de Favoris</string>
     <string name="no_favorites_msg">Appuyez longuement sur l`élément à ajouter aux favoris</string>
     <string name="favorites_remove_msg">Appuyez longuement sur l`élément à supprimer des favoris</string>
+    <string name="translate_english">Traduit en anglais!</string>
+    <string name="translate_french">Traduit en français!</string>
+    <string name="english_translate_tab">Traduction anglaise</string>
+    <string name="french_translate_tab">Traduction française</string>
 </resources>

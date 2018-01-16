@@ -31,4 +31,8 @@
     <string name="backgroundColorString">#800000</string>
     <string name="imageurl">imageURL</string>
     <string name="description">description</string>
+    <string name="translate_english">Translated to English!</string>
+    <string name="translate_french">Translated to French!</string>
+    <string name="english_translate_tab">English Translation</string>
+    <string name="french_translate_tab">French Translation</string>
 </resources>

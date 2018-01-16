@@ -7,11 +7,11 @@
         android:id="@+id/About"
         app:showAsAction="never" />
     <item
-        android:title="English Translation"
+        android:title="@string/english_translate_tab"
         android:id="@+id/en"
         app:showAsAction="never" />
     <item
-        android:title="French Translation"
+        android:title="@string/french_translate_tab"
         android:id="@+id/fr"
         app:showAsAction="never" />
 </menu>
