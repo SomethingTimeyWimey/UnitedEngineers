@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">XM Lecteur de musique</string>
+    <string name="app_name">XMPlayer</string>
     <string name="GroupName">United Engineers</string>
     <string name="LOADING">CHARGEMENT....</string>
     <string name="PLAY">JOUER</string>
