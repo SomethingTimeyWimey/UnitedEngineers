@@ -86,7 +86,7 @@ public class StationListFragment extends Fragment implements OnItemClickListener
 
         //Intializing those above references
         mDatabase = FirebaseDatabase.getInstance();
-        reference = mDatabase.getReference("Stations");
+        reference = mDatabase.getReference(getString(R.string.stations));
 
        // stations = new ArrayList<Station>();
 
@@ -246,11 +246,15 @@ public class StationListFragment extends Fragment implements OnItemClickListener
 
         Station station = (Station) parent.getItemAtPosition(position);
 
+        String description = station.getDescription();
         String streamLink = station.getLink();
+        String imageURL = station.getImageURL();
 
         i = new Intent(getActivity(), RadioActivity.class);
 
+        i.putExtra(getActivity().getString(R.string.description), description);
         i.putExtra(getActivity().getString(R.string.link), streamLink);
+        i.putExtra(getActivity().getString(R.string.imageurl), imageURL);
 
         startActivity(i);
         /*Use station.postion to decide which stream is being selected then run Radio activity*/
@@ -265,11 +269,11 @@ public class StationListFragment extends Fragment implements OnItemClickListener
         if (tag.equalsIgnoreCase(getString(R.string.grey))) {
             sharedPreference.addFavorite(activity, stations.get(position));
             Toast.makeText(activity, activity.getResources().getString(R.string.add_favr), Toast.LENGTH_SHORT).show();
-            button.setTag("red");
+            button.setTag(getString(R.string.red));
             button.setImageResource(R.drawable.heart_red);
         } else {
             sharedPreference.removeFavorite(activity, stations.get(position));
-            button.setTag("grey");
+            button.setTag(getString(R.string.grey));
             button.setImageResource(R.drawable.heart_grey);
             Toast.makeText(activity, activity.getResources().getString(R.string.remove_favr), Toast.LENGTH_SHORT).show();
         }

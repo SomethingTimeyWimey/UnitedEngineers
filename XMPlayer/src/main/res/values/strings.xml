@@ -23,4 +23,12 @@
     <string name="created_by">XMPlayer Created By United Engineers</string>
     <string name="version_num">Version 1.0</string>
     <string name="website">https://github.com/SomethingTimeyWimey/UnitedEngineers</string>
+    <string name="stationlist">station_list</string>
+    <string name="favouriteslist">favourites_list</string>
+    <string name="stationapp">STATION_APP</string>
+    <string name="stationfavourite">Station_Favourite</string>
+    <string name="ok">OK</string>
+    <string name="backgroundColorString">#800000</string>
+    <string name="imageurl">imageURL</string>
+    <string name="description">description</string>
 </resources>
