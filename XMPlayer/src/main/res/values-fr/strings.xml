@@ -8,14 +8,13 @@
     <string name="Radio">Radio</string>
     <string name="Favorites">Favoris</string>
     <string name="favorites">favoris</string>
-    <string name="stations">Stations de radio</string>
+    <string name="stations">Stations</string>
     <string name="MusicPlayer">MP3</string>
     <string name="about_us">À propos de nous</string>
     <string name="closing_message">Êtes-vous sûr de vouloir fermer cette application?</string>
     <string name="closing_title">Demande de clôture</string>
     <string name="yes">Oui</string>
     <string name="no">Non</string>
-    <string name="link">lien</string>
     <string name="grey">gris</string>
     <string name="red">rouge</string>
     <string name="no_permission">Veuillez autoriser la permission d`accéder à MP3</string>
