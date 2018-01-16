@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                 config2.locale = locale2;
                 getBaseContext().getResources().updateConfiguration(config2, getBaseContext().getResources().getDisplayMetrics());
 
-                Toast.makeText(this, "Translated to French!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.translate_french), Toast.LENGTH_LONG).show();
                 recreate();
                 break;
         }
