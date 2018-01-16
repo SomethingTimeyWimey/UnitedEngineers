@@ -31,4 +31,5 @@
     <string name="backgroundColorString">#800000</string>
     <string name="imageurl">imageURL</string>
     <string name="description">description</string>
+    <string name="radioToast">Please allow up to 30 seconds for radio stream to load</string>
 </resources>
