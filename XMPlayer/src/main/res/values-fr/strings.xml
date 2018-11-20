@@ -32,4 +32,15 @@
     <string name="english_translate_tab">Traduction anglaise</string>
     <string name="french_translate_tab">Traduction française</string>
     <string name="radioToast">S`il vous plaît permettre jusqu`à 30 secondes pour le flux radio à charger</string>
+    <string name="link">link</string>
+    <string name="stationlist">station_list</string>
+    <string name="favouriteslist">favourites_list</string>
+    <string name="stationapp">STATION_APP</string>
+    <string name="stationfavourite">Station_Favourite</string>
+    <string name="ok">OK</string>
+    <string name="backgroundColorString">#800000</string>
+    <string name="imageurl">imageURL</string>
+    <string name="description">description</string>
+    <string name="fr">fr</string>
+    <string name="en">en</string>
 </resources>
